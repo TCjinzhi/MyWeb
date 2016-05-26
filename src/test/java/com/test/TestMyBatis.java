@@ -34,4 +34,10 @@ public class TestMyBatis {
 		// logger.info("值："+user.getUserName());
 		logger.info(JSON.toJSONString(user));
 	}
+	
+	@Test
+	public void test2(){
+		int count = userService.Login("admin", "admin");
+		System.out.println(count);
+	}
 }

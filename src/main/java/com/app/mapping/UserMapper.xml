@@ -4,11 +4,12 @@
   <resultMap id="BaseResultMap" type="com.app.pojo.User">
     <id column="id" property="id" jdbcType="INTEGER" />
     <result column="name" property="userName" jdbcType="VARCHAR" />
-    <result column="address" property="address" jdbcType="VARCHAR" />
+    <result column="password" property="password" jdbcType="VARCHAR" />
     <result column="age" property="age" jdbcType="INTEGER" />
+    <result column="address" property="address" jdbcType="VARCHAR" />
   </resultMap>
   <sql id="Base_Column_List" >
-    id, name, address, age
+    id, name, password, age, address
   </sql>
   <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
     select 
@@ -16,44 +17,50 @@
     from muser
     where id = #{id,jdbcType=INTEGER}
   </select>
+  <select id="Login" resultType="java.lang.Integer">
+  	select count(*)
+  	from muser
+  	where name = #{0}
+  	and password = #{1}
+  </select>
+  
   <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer" >
     delete from muser
     where id = #{id,jdbcType=INTEGER}
   </delete>
   <insert id="insert" parameterType="com.app.pojo.User" >
-    insert into muser (id, name, address, 
-      age)
-    values (#{id,jdbcType=INTEGER}, #{userName,jdbcType=VARCHAR}, #{address,jdbcType=VARCHAR}, 
-      #{age,jdbcType=INTEGER})
+    insert into muser (name,password,age,address)
+    values (#{userName,jdbcType=VARCHAR}, #{password,jdbcType=VARCHAR},  #{age,jdbcType=INTEGER},#{address,jdbcType=VARCHAR} 
+     )
   </insert>
   <insert id="insertSelective" parameterType="com.app.pojo.User" >
     insert into muser
     <trim prefix="(" suffix=")" suffixOverrides="," >
-      <if test="id != null" >
-        id,
-      </if>
       <if test="userName != null" >
         name,
       </if>
-      <if test="address != null" >
-        address,
+      <if test="password != null" >
+        password,
       </if>
       <if test="age != null" >
         age,
       </if>
+      <if test="address != null" >
+        address,
+      </if>
     </trim>
     <trim prefix="values (" suffix=")" suffixOverrides="," >
-      <if test="id != null" >
-        #{id,jdbcType=INTEGER},
-      </if>
       <if test="userName != null" >
         #{userName,jdbcType=VARCHAR},
       </if>
-      <if test="address != null" >
-        #{address,jdbcType=VARCHAR},
+      <if test="password != null" >
+        #{password,jdbcType=VARCHAR},
       </if>
       <if test="age != null" >
         #{age,jdbcType=INTEGER},
+      </if>
+      <if test="address != null" >
+        #{address,jdbcType=VARCHAR},
       </if>
     </trim>
   </insert>
@@ -63,11 +70,14 @@
       <if test="userName != null" >
         name = #{userName,jdbcType=VARCHAR},
       </if>
-      <if test="address != null" >
-        address = #{address,jdbcType=VARCHAR},
+      <if test="userName != null" >
+        password = #{password,jdbcType=VARCHAR},
       </if>
       <if test="age != null" >
         age = #{age,jdbcType=INTEGER},
+      </if>
+      <if test="address != null" >
+        address = #{address,jdbcType=VARCHAR},
       </if>
     </set>
     where id = #{id,jdbcType=INTEGER}
@@ -75,8 +85,9 @@
   <update id="updateByPrimaryKey" parameterType="com.app.pojo.User" >
     update muser
     set name = #{userName,jdbcType=VARCHAR},
-      address = #{address,jdbcType=VARCHAR},
+       password = #{password,jdbcType=VARCHAR},
       age = #{age,jdbcType=INTEGER}
+      address = #{address,jdbcType=VARCHAR},
     where id = #{id,jdbcType=INTEGER}
   </update>
 </mapper>

@@ -4,12 +4,9 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-<title>Insert title here</title>
+<title>首页</title>
 </head>
 <body>
-	<form action="showUser">
-		输入id:<input name = "id"></input>
-		<input type="submit" value="提交"></input>
-	</form>
+
 </body>
 </html>

@@ -4,10 +4,12 @@ public class User {
     private Integer id;
 
     private String userName;
+    
+    private String password;
+    
+    private Integer age;
 
     private String address;
-
-    private Integer age;
 
     public Integer getId() {
         return id;
@@ -24,8 +26,16 @@ public class User {
     public void setUserName(String userName) {
         this.userName = userName == null ? null : userName.trim();
     }
+    
+    public String getPassword() {
+		return password;
+	}
 
-    public String getAddress() {
+	public void setPassword(String password) {
+		this.password = password;
+	}
+
+	public String getAddress() {
         return address;
     }
 

@@ -18,4 +18,14 @@ public class UserServiceImpl implements IUserService {
 		return this.userDao.selectByPrimaryKey(userId);
 	}
 
+	@Override
+	public int Login(String userName, String password) {
+		return this.userDao.Login(userName,password);
+	}
+	
+	@Override
+	public int insert(User user){
+		return this.userDao.insert(user);
+	}
+
 }

@@ -4,4 +4,8 @@ import com.app.pojo.User;
 
 public interface IUserService {
 	public User getUserById(int userId);
+
+	public int Login(String userName, String password);
+	
+	public int insert(User user);
 }

@@ -4,9 +4,9 @@
 <html>
 	<head>
 	   <title>Bootstrap 实例 - 如何使用字形图标（Glyphicons）</title>
-	   <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+	   <link href="../bootstrap/css/bootstrap.min.css" rel="stylesheet">
 	   <script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
-	   <script src="bootstrap/js/bootstrap.min.js"></script>
+	   <script src="../bootstrap/js/bootstrap.min.js"></script>
 	</head>
 	<body>
 	<p>

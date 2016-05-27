@@ -5,14 +5,14 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <script type="text/javascript"
-	src="http://www.francescomalagrino.com/BootstrapPageGenerator/3/js/jquery-2.0.0.min.js"></script>
+	src="../bootstrap/js/jquery-2.0.0.min.js"></script>
 <script type="text/javascript"
-	src="http://www.francescomalagrino.com/BootstrapPageGenerator/3/js/jquery-ui"></script>
+	src="../bootstrap/js/jquery-ui.js"></script>
 <link
-	href="http://www.francescomalagrino.com/BootstrapPageGenerator/3/css/bootstrap-combined.min.css"
+	href="../bootstrap/css/bootstrap-combined.min.css"
 	rel="stylesheet" media="screen">
 <script type="text/javascript"
-	src="http://www.francescomalagrino.com/BootstrapPageGenerator/3/js/bootstrap.min.js"></script>
+	src="../bootstrap/js/bootstrap.min.js"></script>
 <title>首页</title>
 </head>
 <body>
@@ -24,14 +24,14 @@
 					<li><a href="#">资料</a></li>
 					<li class="disabled"><a href="#">信息</a></li>
 					<li class="dropdown pull-right"><a href="#"
-						data-toggle="dropdown" class="dropdown-toggle">下拉<strong
+						data-toggle="dropdown" class="dropdown-toggle">设置<strong
 							class="caret"></strong></a>
 						<ul class="dropdown-menu">
 							<li><a href="#">操作</a></li>
 							<li><a href="#">设置栏目</a></li>
 							<li><a href="#">更多设置</a></li>
 							<li class="divider"></li>
-							<li><a href="#">分割线</a></li>
+							<li><a href="#">退出</a></li>
 						</ul></li>
 				</ul>
 				<div class="hero-unit">

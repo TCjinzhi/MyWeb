@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import com.alibaba.fastjson.JSON;
+import com.app.commonTool.StrUtil;
 import com.app.pojo.CheckUsername;
 import com.app.pojo.User;
 import com.app.service.IUserService;
@@ -38,10 +39,12 @@ public class UserController {
     public String login(HttpServletRequest request,Model model){
     	String username = request.getParameter("userName");
     	String password = request.getParameter("password");
+    	password = StrUtil.getEncryptStr(password);
     	int count = 0; 
     	count = this.userService.Login(username,password);
     	if(count>0)
     		return "homePage";
+    	request.setAttribute("message", "账号或密码不正确");
     	return "login";
     }
     
@@ -49,8 +52,10 @@ public class UserController {
     @RequestMapping("/register")
     public String register(HttpServletRequest request,Model model){
     	User user = new User();
+    	String password = request.getParameter("password");
+    	password = StrUtil.getEncryptStr(password);
     	user.setUserName(request.getParameter("userName"));
-    	user.setPassword(request.getParameter("password"));
+    	user.setPassword(password);
     	user.setAge(Integer.parseInt(request.getParameter("age")));
     	user.setAddress(request.getParameter("address"));
     	if(this.userService.insert(user) == 0){

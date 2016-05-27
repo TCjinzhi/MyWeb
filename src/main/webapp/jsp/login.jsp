@@ -24,6 +24,11 @@
 					<h3>登录</h3>
 				</center>
 				<form class="form-horizontal" action="login" method="post">
+					<% if(request.getAttribute("message") != null){ %>
+						<div class="control-group" id="prompt">
+							<center style="color:red" id="message"><%=request.getAttribute("message") %></center>
+						</div>
+					<%} %>
 					<div class="control-group">
 						<label class="control-label" for="userName">账号</label>
 						<div class="controls">

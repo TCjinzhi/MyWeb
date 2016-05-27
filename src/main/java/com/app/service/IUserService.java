@@ -8,4 +8,6 @@ public interface IUserService {
 	public int Login(String userName, String password);
 	
 	public int insert(User user);
+
+	public int checkUsername(String string);
 }

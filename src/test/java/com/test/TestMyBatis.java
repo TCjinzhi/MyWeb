@@ -40,4 +40,10 @@ public class TestMyBatis {
 		int count = userService.Login("admin", "admin");
 		System.out.println(count);
 	}
+	
+	@Test
+	public void test3(){
+		int count = userService.checkUsername("zdsda");
+		System.out.println(count);
+	}
 }

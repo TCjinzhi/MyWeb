@@ -24,6 +24,11 @@
   	and password = #{1}
   </select>
   
+  <select id="checkUsername" resultType="java.lang.Integer">
+  	select count(*)
+  	from muser
+  	where name = #{0}
+  </select>
   <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer" >
     delete from muser
     where id = #{id,jdbcType=INTEGER}

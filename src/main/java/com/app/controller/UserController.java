@@ -5,9 +5,12 @@ import javax.servlet.http.HttpServletRequest;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
+import com.alibaba.fastjson.JSON;
+import com.app.pojo.CheckUsername;
 import com.app.pojo.User;
 import com.app.service.IUserService;
 
@@ -57,10 +60,23 @@ public class UserController {
     	return "login";
     }
     
-    public @ResponseBody String checkUsername(HttpServletRequest request,Model model) {
+    @RequestMapping("/checkUsername")
+    @ResponseBody
+    public CheckUsername checkUsername(@RequestBody User user) {
+    	CheckUsername cuser = new CheckUsername();
+    	cuser.setUsername(user.getUserName());
+    	int result = this.userService.checkUsername(user.getUserName());
+    	if(result == 0 ){
+    		cuser.setCode(0);
+    		cuser.setMsg("恭喜，用户名可用！");
+    	} 
+    	if(result > 0 ){
+    		cuser.setCode(1);
+    		cuser.setMsg("用户名已存在！");
+    	} 
     	
-    	return "ok";
-    	
+    	System.out.println(JSON.toJSONString(cuser));
+    	return cuser;
 	}
     
 }

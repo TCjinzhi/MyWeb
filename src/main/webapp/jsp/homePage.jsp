@@ -35,14 +35,25 @@
 						</ul></li>
 				</ul>
 				<div class="hero-unit">
-					<h1>W3CSCHOOL菜鸟教程</h1>
+					<!-- <h1>W3CSCHOOL菜鸟教程</h1>
 					<p>学的不仅是技术，更是梦想！</p>
 					<p>再牛逼的梦想,也抵不住你傻逼似的坚持！</p>
 					<p>
 						<a class="btn btn-primary btn-large"
 							href="http://www.w3cschool.cc/bootstrap/bootstrap-tutorial.html">Bootstrap
 							在线教程 »</a>
+					</p> -->
+					<h2>U转诊后台管理系统</h2>
+					<p>坐席辅助平台</p>
+					<p>
+						<a class="btn btn-primary btn-large"
+							href="../jsp/patient.jsp">患者列表
+						</a>
+						<a class="btn btn-primary btn-large"
+							href="../jsp/doctorList.jsp">医生列表
+						</a>
 					</p>
+					
 				</div>
 				<div class="progress progress-info">
 					<div class="bar"></div>

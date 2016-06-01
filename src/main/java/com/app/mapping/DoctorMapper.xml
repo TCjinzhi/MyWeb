@@ -30,4 +30,10 @@
     from doctor
     where id = #{id,jdbcType=INTEGER}
   </select>
+  
+   <select id="getDoctorList" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from doctor
+  </select>
 </mapper>

@@ -1,5 +1,8 @@
 package com.test;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import javax.annotation.Resource;
 
 import org.junit.Test;
@@ -25,5 +28,12 @@ public class TestDoctor {
 		doctor = doctorService.getDoctorById(13);
 		System.out.println(doctor);
 		System.out.println(JSON.toJSONString(doctor));
+	}
+	
+	@Test
+	public void test2(){
+		List<Doctor> doctors = new ArrayList<>();
+		doctors = doctorService.getDoctorList();
+		System.out.println(doctors.size());
 	}
 }

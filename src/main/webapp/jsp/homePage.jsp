@@ -16,6 +16,11 @@
 <title>首页</title>
 </head>
 <body>
+<script type="text/javascript">
+	function toDoctorList(){
+		
+	}
+</script>
 	<div class="container-fluid" id="LG">
 		<div class="row-fluid">
 			<div class="span12">
@@ -46,12 +51,16 @@
 					<h2>U转诊后台管理系统</h2>
 					<p>坐席辅助平台</p>
 					<p>
-						<a class="btn btn-primary btn-large"
+						<form>
+							<a class="btn btn-primary btn-large"
 							href="../jsp/patient.jsp">患者列表
-						</a>
-						<a class="btn btn-primary btn-large"
-							href="../jsp/doctorList.jsp">医生列表
-						</a>
+							</a>
+						</form>
+						<form action="../doctor/doctorList" method="post">
+							<input class="btn btn-primary btn-large"
+							type="submit" value="医生列表"/>
+						</form>
+						
 					</p>
 					
 				</div>

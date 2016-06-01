@@ -9,8 +9,11 @@ import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
 import com.alibaba.fastjson.JSON;
+import com.app.pojo.Doctor;
 import com.app.pojo.User;
+import com.app.service.IDoctorService;
 import com.app.service.IUserService;
+import com.app.service.impl.DoctorServiceImpl;
 
 @RunWith(SpringJUnit4ClassRunner.class)
 // 表示继承了SpringJUnit4ClassRunner类
@@ -20,7 +23,7 @@ public class TestMyBatis {
 	// private ApplicationContext ac = null;
 	@Resource
 	private IUserService userService = null;
-
+	
 	// @Before
 	// public void before() {
 	// ac = new ClassPathXmlApplicationContext("applicationContext.xml");
@@ -46,4 +49,5 @@ public class TestMyBatis {
 		int count = userService.checkUsername("zdsda");
 		System.out.println(count);
 	}
+	
 }

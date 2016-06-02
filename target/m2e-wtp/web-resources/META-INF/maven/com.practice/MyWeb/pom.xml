@@ -100,11 +100,8 @@
 			<version>5.1.30</version>
 		</dependency>
 		<!-- 导入dbcp的jar包，用来在applicationContext.xml中配置数据库 -->
-		<!-- <dependency>
-			<groupId>commons-dbcp</groupId>
-			<artifactId>commons-dbcp</artifactId>
-			<version>1.2.2</version>
-		</dependency> -->
+		<!-- <dependency> <groupId>commons-dbcp</groupId> <artifactId>commons-dbcp</artifactId> 
+			<version>1.2.2</version> </dependency> -->
 		<!-- 导入druid的jar包，用来在applicationContext.xml中配置数据库,取代dbcp -->
 		<dependency>
 			<groupId>com.alibaba</groupId>
@@ -116,6 +113,12 @@
 			<groupId>jstl</groupId>
 			<artifactId>jstl</artifactId>
 			<version>1.2</version>
+		</dependency>
+		<!-- 分页工具 -->
+		<dependency>
+			<groupId>com.github.pagehelper</groupId>
+			<artifactId>pagehelper</artifactId>
+			<version>4.1.5</version>
 		</dependency>
 		<!-- 日志文件管理包 -->
 		<!-- log start -->

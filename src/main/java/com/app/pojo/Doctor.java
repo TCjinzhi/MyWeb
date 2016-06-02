@@ -8,7 +8,6 @@ public class Doctor {
 	private Boolean gender;
 	private String hospital;
 	private String department;
-	private String post;
 	private String office;
 	private String resume;
 	private String level;
@@ -75,13 +74,6 @@ public class Doctor {
 		this.department = department;
 	}
 
-	public String getPost() {
-		return post;
-	}
-
-	public void setPost(String post) {
-		this.post = post;
-	}
 
 	public String getOffice() {
 		return office;

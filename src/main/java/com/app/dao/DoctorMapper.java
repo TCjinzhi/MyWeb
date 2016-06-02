@@ -8,4 +8,5 @@ public interface DoctorMapper {
 	Doctor selectByPrimaryKey(Integer id);
 	
 	List<Doctor> getDoctorList();
+	
 }

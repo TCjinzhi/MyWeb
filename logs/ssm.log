@@ -1632,3 +1632,83 @@ Caused by: org.springframework.beans.factory.NoSuchBeanDefinitionException: No q
 [INFO] [2016-06-01 11:27:04][com.alibaba.druid.pool.DruidDataSource]{dataSource-1} inited
 [INFO] [2016-06-01 11:27:04][org.springframework.context.support.GenericApplicationContext]Closing org.springframework.context.support.GenericApplicationContext@13c78c0b: startup date [Wed Jun 01 11:27:04 CST 2016]; root of context hierarchy
 [INFO] [2016-06-01 11:27:05][com.alibaba.druid.pool.DruidDataSource]{dataSource-1} closed
+[INFO] [2016-06-01 14:16:30][org.springframework.beans.factory.xml.XmlBeanDefinitionReader]Loading XML bean definitions from class path resource [spring-mybatis.xml]
+[INFO] [2016-06-01 14:16:30][org.springframework.context.support.GenericApplicationContext]Refreshing org.springframework.context.support.GenericApplicationContext@26f67b76: startup date [Wed Jun 01 14:16:30 CST 2016]; root of context hierarchy
+[INFO] [2016-06-01 14:16:30][org.springframework.beans.factory.config.PropertyPlaceholderConfigurer]Loading properties file from class path resource [jdbc.properties]
+[INFO] [2016-06-01 14:16:30][org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor]JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+[ERROR] [2016-06-01 14:16:31][com.alibaba.druid.pool.DruidAbstractDataSource]maxIdle is deprecated
+[INFO] [2016-06-01 14:16:31][com.alibaba.druid.pool.DruidDataSource]{dataSource-1} inited
+[INFO] [2016-06-01 14:16:31][org.springframework.context.support.GenericApplicationContext]Closing org.springframework.context.support.GenericApplicationContext@26f67b76: startup date [Wed Jun 01 14:16:30 CST 2016]; root of context hierarchy
+[INFO] [2016-06-01 14:16:31][com.alibaba.druid.pool.DruidDataSource]{dataSource-1} closed
+[INFO] [2016-06-01 14:17:56][org.springframework.beans.factory.xml.XmlBeanDefinitionReader]Loading XML bean definitions from class path resource [spring-mybatis.xml]
+[INFO] [2016-06-01 14:17:56][org.springframework.context.support.GenericApplicationContext]Refreshing org.springframework.context.support.GenericApplicationContext@26f67b76: startup date [Wed Jun 01 14:17:56 CST 2016]; root of context hierarchy
+[INFO] [2016-06-01 14:17:56][org.springframework.beans.factory.config.PropertyPlaceholderConfigurer]Loading properties file from class path resource [jdbc.properties]
+[INFO] [2016-06-01 14:17:56][org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor]JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+[ERROR] [2016-06-01 14:17:57][com.alibaba.druid.pool.DruidAbstractDataSource]maxIdle is deprecated
+[INFO] [2016-06-01 14:17:57][com.alibaba.druid.pool.DruidDataSource]{dataSource-1} inited
+[INFO] [2016-06-01 14:17:57][org.springframework.context.support.GenericApplicationContext]Closing org.springframework.context.support.GenericApplicationContext@26f67b76: startup date [Wed Jun 01 14:17:56 CST 2016]; root of context hierarchy
+[INFO] [2016-06-01 14:17:57][com.alibaba.druid.pool.DruidDataSource]{dataSource-1} closed
+[INFO] [2016-06-01 14:18:25][org.springframework.beans.factory.xml.XmlBeanDefinitionReader]Loading XML bean definitions from class path resource [spring-mybatis.xml]
+[INFO] [2016-06-01 14:18:25][org.springframework.context.support.GenericApplicationContext]Refreshing org.springframework.context.support.GenericApplicationContext@26f67b76: startup date [Wed Jun 01 14:18:25 CST 2016]; root of context hierarchy
+[INFO] [2016-06-01 14:18:25][org.springframework.beans.factory.config.PropertyPlaceholderConfigurer]Loading properties file from class path resource [jdbc.properties]
+[INFO] [2016-06-01 14:18:25][org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor]JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+[ERROR] [2016-06-01 14:18:25][com.alibaba.druid.pool.DruidAbstractDataSource]maxIdle is deprecated
+[INFO] [2016-06-01 14:18:25][com.alibaba.druid.pool.DruidDataSource]{dataSource-1} inited
+[INFO] [2016-06-01 14:18:26][org.springframework.context.support.GenericApplicationContext]Closing org.springframework.context.support.GenericApplicationContext@26f67b76: startup date [Wed Jun 01 14:18:25 CST 2016]; root of context hierarchy
+[INFO] [2016-06-01 14:18:26][com.alibaba.druid.pool.DruidDataSource]{dataSource-1} closed
+[INFO] [2016-06-01 14:49:52][org.springframework.beans.factory.xml.XmlBeanDefinitionReader]Loading XML bean definitions from class path resource [spring-mybatis.xml]
+[INFO] [2016-06-01 14:49:53][org.springframework.context.support.GenericApplicationContext]Refreshing org.springframework.context.support.GenericApplicationContext@5762806e: startup date [Wed Jun 01 14:49:53 CST 2016]; root of context hierarchy
+[INFO] [2016-06-01 14:49:53][org.springframework.beans.factory.config.PropertyPlaceholderConfigurer]Loading properties file from class path resource [jdbc.properties]
+[INFO] [2016-06-01 14:49:53][org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor]JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+[ERROR] [2016-06-01 14:49:53][com.alibaba.druid.pool.DruidAbstractDataSource]maxIdle is deprecated
+[INFO] [2016-06-01 14:49:53][com.alibaba.druid.pool.DruidDataSource]{dataSource-1} inited
+[INFO] [2016-06-01 14:53:07][org.springframework.beans.factory.xml.XmlBeanDefinitionReader]Loading XML bean definitions from class path resource [spring-mybatis.xml]
+[INFO] [2016-06-01 14:53:07][org.springframework.context.support.GenericApplicationContext]Refreshing org.springframework.context.support.GenericApplicationContext@26f67b76: startup date [Wed Jun 01 14:53:07 CST 2016]; root of context hierarchy
+[INFO] [2016-06-01 14:53:07][org.springframework.beans.factory.config.PropertyPlaceholderConfigurer]Loading properties file from class path resource [jdbc.properties]
+[INFO] [2016-06-01 14:53:07][org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor]JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+[ERROR] [2016-06-01 14:53:07][com.alibaba.druid.pool.DruidAbstractDataSource]maxIdle is deprecated
+[INFO] [2016-06-01 14:53:08][com.alibaba.druid.pool.DruidDataSource]{dataSource-1} inited
+[INFO] [2016-06-01 14:53:08][org.springframework.context.support.GenericApplicationContext]Closing org.springframework.context.support.GenericApplicationContext@26f67b76: startup date [Wed Jun 01 14:53:07 CST 2016]; root of context hierarchy
+[INFO] [2016-06-01 14:53:08][com.alibaba.druid.pool.DruidDataSource]{dataSource-1} closed
+[INFO] [2016-06-01 14:53:39][org.springframework.beans.factory.xml.XmlBeanDefinitionReader]Loading XML bean definitions from class path resource [spring-mybatis.xml]
+[INFO] [2016-06-01 14:53:39][org.springframework.context.support.GenericApplicationContext]Refreshing org.springframework.context.support.GenericApplicationContext@5762806e: startup date [Wed Jun 01 14:53:39 CST 2016]; root of context hierarchy
+[INFO] [2016-06-01 14:53:39][org.springframework.beans.factory.config.PropertyPlaceholderConfigurer]Loading properties file from class path resource [jdbc.properties]
+[INFO] [2016-06-01 14:53:40][org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor]JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+[ERROR] [2016-06-01 14:53:40][com.alibaba.druid.pool.DruidAbstractDataSource]maxIdle is deprecated
+[INFO] [2016-06-01 14:53:40][com.alibaba.druid.pool.DruidDataSource]{dataSource-1} inited
+[INFO] [2016-06-01 15:00:26][org.springframework.beans.factory.xml.XmlBeanDefinitionReader]Loading XML bean definitions from class path resource [spring-mybatis.xml]
+[INFO] [2016-06-01 15:00:26][org.springframework.context.support.GenericApplicationContext]Refreshing org.springframework.context.support.GenericApplicationContext@5762806e: startup date [Wed Jun 01 15:00:26 CST 2016]; root of context hierarchy
+[INFO] [2016-06-01 15:00:26][org.springframework.beans.factory.config.PropertyPlaceholderConfigurer]Loading properties file from class path resource [jdbc.properties]
+[INFO] [2016-06-01 15:00:26][org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor]JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+[ERROR] [2016-06-01 15:00:27][com.alibaba.druid.pool.DruidAbstractDataSource]maxIdle is deprecated
+[INFO] [2016-06-01 15:00:27][com.alibaba.druid.pool.DruidDataSource]{dataSource-1} inited
+[INFO] [2016-06-01 16:18:25][org.springframework.beans.factory.xml.XmlBeanDefinitionReader]Loading XML bean definitions from class path resource [spring-mybatis.xml]
+[INFO] [2016-06-01 16:18:25][org.springframework.context.support.GenericApplicationContext]Refreshing org.springframework.context.support.GenericApplicationContext@26f67b76: startup date [Wed Jun 01 16:18:25 CST 2016]; root of context hierarchy
+[INFO] [2016-06-01 16:18:25][org.springframework.beans.factory.config.PropertyPlaceholderConfigurer]Loading properties file from class path resource [jdbc.properties]
+[INFO] [2016-06-01 16:18:25][org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor]JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+[ERROR] [2016-06-01 16:18:25][com.alibaba.druid.pool.DruidAbstractDataSource]maxIdle is deprecated
+[INFO] [2016-06-01 16:18:25][com.alibaba.druid.pool.DruidDataSource]{dataSource-1} inited
+[INFO] [2016-06-01 16:18:25][org.springframework.context.support.GenericApplicationContext]Closing org.springframework.context.support.GenericApplicationContext@26f67b76: startup date [Wed Jun 01 16:18:25 CST 2016]; root of context hierarchy
+[INFO] [2016-06-01 16:18:25][com.alibaba.druid.pool.DruidDataSource]{dataSource-1} closed
+[INFO] [2016-06-01 16:26:43][org.springframework.beans.factory.xml.XmlBeanDefinitionReader]Loading XML bean definitions from class path resource [spring-mybatis.xml]
+[INFO] [2016-06-01 16:26:43][org.springframework.context.support.GenericApplicationContext]Refreshing org.springframework.context.support.GenericApplicationContext@26f67b76: startup date [Wed Jun 01 16:26:43 CST 2016]; root of context hierarchy
+[INFO] [2016-06-01 16:26:43][org.springframework.beans.factory.config.PropertyPlaceholderConfigurer]Loading properties file from class path resource [jdbc.properties]
+[INFO] [2016-06-01 16:26:43][org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor]JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+[ERROR] [2016-06-01 16:26:43][com.alibaba.druid.pool.DruidAbstractDataSource]maxIdle is deprecated
+[INFO] [2016-06-01 16:26:43][com.alibaba.druid.pool.DruidDataSource]{dataSource-1} inited
+[INFO] [2016-06-01 16:26:44][org.springframework.context.support.GenericApplicationContext]Closing org.springframework.context.support.GenericApplicationContext@26f67b76: startup date [Wed Jun 01 16:26:43 CST 2016]; root of context hierarchy
+[INFO] [2016-06-01 16:26:44][com.alibaba.druid.pool.DruidDataSource]{dataSource-1} closed
+[INFO] [2016-06-01 16:27:12][org.springframework.beans.factory.xml.XmlBeanDefinitionReader]Loading XML bean definitions from class path resource [spring-mybatis.xml]
+[INFO] [2016-06-01 16:27:12][org.springframework.context.support.GenericApplicationContext]Refreshing org.springframework.context.support.GenericApplicationContext@5762806e: startup date [Wed Jun 01 16:27:12 CST 2016]; root of context hierarchy
+[INFO] [2016-06-01 16:27:12][org.springframework.beans.factory.config.PropertyPlaceholderConfigurer]Loading properties file from class path resource [jdbc.properties]
+[INFO] [2016-06-01 16:27:12][org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor]JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+[ERROR] [2016-06-01 16:27:13][com.alibaba.druid.pool.DruidAbstractDataSource]maxIdle is deprecated
+[INFO] [2016-06-01 16:27:13][com.alibaba.druid.pool.DruidDataSource]{dataSource-1} inited
+[INFO] [2016-06-02 14:01:07][org.springframework.beans.factory.xml.XmlBeanDefinitionReader]Loading XML bean definitions from class path resource [spring-mybatis.xml]
+[INFO] [2016-06-02 14:01:07][org.springframework.context.support.GenericApplicationContext]Refreshing org.springframework.context.support.GenericApplicationContext@26f67b76: startup date [Thu Jun 02 14:01:07 CST 2016]; root of context hierarchy
+[INFO] [2016-06-02 14:01:07][org.springframework.beans.factory.config.PropertyPlaceholderConfigurer]Loading properties file from class path resource [jdbc.properties]
+[INFO] [2016-06-02 14:01:07][org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor]JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+[ERROR] [2016-06-02 14:01:08][com.alibaba.druid.pool.DruidAbstractDataSource]maxIdle is deprecated
+[INFO] [2016-06-02 14:01:08][com.alibaba.druid.pool.DruidDataSource]{dataSource-1} inited
+[INFO] [2016-06-02 14:01:08][org.springframework.context.support.GenericApplicationContext]Closing org.springframework.context.support.GenericApplicationContext@26f67b76: startup date [Thu Jun 02 14:01:07 CST 2016]; root of context hierarchy
+[INFO] [2016-06-02 14:01:08][com.alibaba.druid.pool.DruidDataSource]{dataSource-1} closed

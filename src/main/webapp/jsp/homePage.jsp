@@ -16,11 +16,6 @@
 <title>首页</title>
 </head>
 <body>
-<script type="text/javascript">
-	function toDoctorList(){
-		
-	}
-</script>
 	<div class="container-fluid" id="LG">
 		<div class="row-fluid">
 			<div class="span12">

@@ -12,11 +12,10 @@
 </head>
 <body>
 <script type="text/javascript" language="java">
-	function nextPage(){
-		alert("111111");
-		
-		window.location.reload();
-	}
+	function nextPage() {//页面异步请求
+	    
+	};
+</script>
 	
 </script>
 
@@ -100,16 +99,15 @@
 				</table>
 				<div class="pagination pagination-large pagination-centered">
 					<ul>
-						<li><a href="#">上一页</a></li>
-						<li><a href="#">${doctorList.pageNum}</a></li>
-						<li><a href="#">${doctorList.pageNum+1}</a></li>
-						<li><a href="#">${doctorList.pageNum+2}</a></li>
-						<li><a href="#">${doctorList.pageNum+3}</a></li>
-						<li><a href="#">${doctorList.pageNum+4}</a></li>
-						<li><form action="../doctor/nextPage" method="post">
+						<li><a href="?action=firstPage">首页</a></li>
+						<li><a href="?action=prePage">上一页</a></li>
+						<li><a>当前第${doctorList.pageNum}页</a></li>
+						<!--  <li><form action="../doctor/nextPage" method="post">
 							<input class="btn btn-primary btn-large"
 							type="submit" value="下一页"/>
-						</form></li>
+						</form></li>-->
+						<li><a href="?action=nextPage">下一页</a>
+						<li><a href="?action=lastPage">尾页</a></li>
 						<li><a>共 ${doctorList.pages} 页</a></li>
 					</ul>
 				</div>

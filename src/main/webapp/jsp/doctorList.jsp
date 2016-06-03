@@ -12,13 +12,11 @@
 </head>
 <body>
 <script type="text/javascript" language="java">
-	function nextPage() {//页面异步请求
-	    
+	function exportDoctorList() {//页面异步请求
+	    var url = "../doctor/exportDoctorList";
+	    window.open(url);
 	};
 </script>
-	
-</script>
-
 
 	<div class="container-fluid">
 		<div class="row-fluid">
@@ -70,8 +68,9 @@
 					</h1>
 				</div>
 				<form class="form-search" >
-					<input class="input-medium search-query" type="text" style="margin-left:60%"/>
+					<input class="input-medium search-query" type="text" id="name" name="name" style="margin-left:60%"/>
 					<button type="submit" class="btn">查找</button>
+					<input type="button" value="导出" onclick="exportDoctorList();" class="btn"></input>
 				</form>
 				<table class="table table-striped table-hover table-condensed">
 					<thead>

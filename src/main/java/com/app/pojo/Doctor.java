@@ -1,21 +1,42 @@
 package com.app.pojo;
 
-public class Doctor {
+import java.io.Serializable;
+
+public class Doctor implements Serializable {
+	
+	//序列换的版本控制
+	private static final long serialVersionUID = 1l;
+	
 	private Integer id;
+	
 	private String name;
+	
 	private String mobile;
+	
 	private String password;
+	
 	private Boolean gender;
+	
 	private String hospital;
+	
 	private String department;
+	
 	private String office;
+	
 	private String resume;
+	
 	private String level;
+	
 	private String province;
+	
 	private String city;
+	
 	private Integer priority;
+	
 	private Boolean famous_flag;
+	
 	private Integer integral;
+	
 	private Boolean get_flag;
 
 	public Integer getId() {

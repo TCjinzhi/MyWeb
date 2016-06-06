@@ -1,8 +1,13 @@
 package com.app.pojo;
 
+import java.io.Serializable;
 import java.util.Date;
 
-public class Delegation {
+public class Delegation implements Serializable {
+	
+	//序列换的版本控制
+	private static final long serialVersionUID = 1l;
+	
 	private Integer id;
 	
 	private String invitationCode; 

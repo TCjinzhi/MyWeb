@@ -1,6 +1,10 @@
 package com.app.pojo;
 
-public class CheckUsername {
+import java.io.Serializable;
+public class CheckUsername implements Serializable {
+	
+	//序列换的版本控制
+	private static final long serialVersionUID = 1l;
 	
 	private Integer code;
 	

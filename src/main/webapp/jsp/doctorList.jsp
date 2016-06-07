@@ -16,6 +16,9 @@
 	    var url = "../doctor/exportDoctorList";
 	    window.open(url);
 	};
+	
+	
+	
 </script>
 
 	<div class="container-fluid">

@@ -38,7 +38,7 @@ $(function(){
 		alert("error");
 	};
 	$("#sendButton").click(function() {
-		socket.send($("#msg").val());
+		socket.send($("#username").val() + ":" +$("#msg").val());
 	});
 	$("#abcde").click(function(){
 		$.post("${pageContext.request.contextPath}/img/background01.png");
@@ -52,6 +52,7 @@ $(function(){
 		<input type="text" id="msg" /> 
 		<input type="button" id="sendButton" value="发送" />
 		<!-- <input type="button" value="改变背景" id="abcde" /> -->
+		<input type="text" style="display:none" id="username" value="${username}"/>
 	</div>
 </body>
 </html>

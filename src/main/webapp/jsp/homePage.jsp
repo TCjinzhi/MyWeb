@@ -21,7 +21,7 @@
 			<div class="span12">
 				<ul class="nav nav-pills">
 					<li class="active"><a href="#">首页</a></li>
-					<li><a href="#">资料</a></li>
+					<li><a href="#"> ${username}</a></li>
 					<li class="disabled"><a href="#">信息</a></li>
 					<li class="dropdown pull-right"><a href="#"
 						data-toggle="dropdown" class="dropdown-toggle">设置<strong
@@ -31,7 +31,7 @@
 							<li><a href="#">设置栏目</a></li>
 							<li><a href="#">更多设置</a></li>
 							<li class="divider"></li>
-							<li><a href="#">退出</a></li>
+							<li><a href="<%=request.getContextPath()%>/setting/exit">退出</a></li>
 						</ul></li>
 				</ul>
 				<div class="hero-unit">
@@ -45,19 +45,15 @@
 					</p> -->
 					<h2>U转诊后台管理系统</h2>
 					<p>坐席辅助平台</p>
-					<p>
-						<form>
-							<a class="btn btn-primary btn-large"
-							href="../jsp/patient.jsp">患者列表
-							</a>
-						</form>
-						<form action="../doctor/doctorList" method="post">
-							<input class="btn btn-primary btn-large"
-							type="submit" value="医生列表"/>
-						</form>
-						
-					</p>
-					
+					<a class="btn btn-primary btn-large"
+					href="../jsp/patient.jsp">患者列表
+					</a>
+					<a class="btn btn-primary btn-large" 
+						href="../doctor/doctorList">医生列表
+					</a>
+					<a class="btn btn-primary btn-large" 
+						href="../jsp/wechatRoom.jsp">聊天室
+					</a>
 				</div>
 				<div class="progress progress-info">
 					<div class="bar"></div>

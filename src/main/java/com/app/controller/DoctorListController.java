@@ -1,8 +1,5 @@
 package com.app.controller;
 
-import java.io.OutputStream;
-import java.io.PrintWriter;
-import java.io.UnsupportedEncodingException;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
@@ -11,8 +8,9 @@ import javax.annotation.Resource;
 import javax.servlet.ServletOutputStream;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.sound.midi.MidiDevice.Info;
 
-import org.apache.jasper.tagplugins.jstl.core.Out;
+import org.apache.log4j.Logger;
 import org.apache.poi.hssf.usermodel.HSSFCell;
 import org.apache.poi.hssf.usermodel.HSSFCellStyle;
 import org.apache.poi.hssf.usermodel.HSSFRow;
@@ -33,11 +31,19 @@ public class DoctorListController {
 	
 	@Resource
 	private IDoctorService doctorService;
-
+	
+	private static Logger logger = Logger.getLogger(DoctorListController.class);
+	
 	@RequestMapping("/doctorList")
 	public String getDoctorList(HttpServletRequest request, Model model) {
-		System.out.println(request.getParameter("action"));
-		
+		/**
+		 * 登陆验证
+		 */
+		String username = (String) request.getSession().getAttribute("username");
+		logger.info("当前用户："+username);
+		if(username == null){
+			return "login";
+		}
 		//获取分页的历史session
 		@SuppressWarnings("unchecked")
 		PageInfo<Doctor> pageInfoOld = (PageInfo<Doctor>) request.getSession().getAttribute("doctorList");
@@ -153,6 +159,7 @@ public class DoctorListController {
         	wb.write(os);
         	os.flush();
         	os.close();
+        	wb.close();
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();

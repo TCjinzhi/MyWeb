@@ -3,6 +3,7 @@ package com.app.controller;
 import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;
 
+import org.apache.log4j.Logger;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -14,6 +15,9 @@ import com.app.commonTool.StrUtil;
 import com.app.pojo.CheckUsername;
 import com.app.pojo.User;
 import com.app.service.IUserService;
+import com.test.TestMyBatis;
+
+import sun.invoke.empty.Empty;
 
 @Controller  
 @RequestMapping("/user") 
@@ -21,6 +25,7 @@ public class UserController {
 	@Resource  
     private IUserService userService;  
 	
+	private static Logger logger = Logger.getLogger(UserController.class);
 	
 	@RequestMapping("/index")  
     public String toIndex(HttpServletRequest request,Model model){  
@@ -37,13 +42,27 @@ public class UserController {
     
     @RequestMapping("/login")
     public String login(HttpServletRequest request,Model model){
-    	String username = request.getParameter("userName");
-    	String password = request.getParameter("password");
-    	password = StrUtil.getEncryptStr(password);
+    	String username;
+    	String password;
+    	if(request.getSession().getAttribute("username") != null){
+    		username  = (String) request.getSession().getAttribute("username");
+    		password = (String) request.getSession().getAttribute("password");
+    	} else {
+    		username = request.getParameter("userName");
+    		password = request.getParameter("password");
+    		if(password == null){
+    			return "login";
+    		}
+    		password = StrUtil.getEncryptStr(password);
+    	}
+    	logger.info("username:"+ username + ",password:"+ password +" 正在尝试登陆系统！");
     	int count = 0; 
     	count = this.userService.Login(username,password);
-    	if(count>0)
+    	if(count>0){
+    		request.getSession().setAttribute("username", username);
+    		request.getSession().setAttribute("password", password);
     		return "homePage";
+    	}
     	request.setAttribute("message", "账号或密码不正确");
     	return "login";
     }

@@ -40,7 +40,7 @@ public class TestMyBatis {
 	
 	@Test
 	public void test2(){
-		int count = userService.Login("admin", "admin");
+		int count = userService.Login("admin", "c3a6d93e959fd8879848007f7256f615");
 		System.out.println(count);
 	}
 	

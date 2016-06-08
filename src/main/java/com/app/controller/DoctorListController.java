@@ -44,6 +44,9 @@ public class DoctorListController {
 		if(username == null){
 			return "login";
 		}
+		
+		String name = request.getParameter("name");
+		System.out.println(name);
 		//获取分页的历史session
 		@SuppressWarnings("unchecked")
 		PageInfo<Doctor> pageInfoOld = (PageInfo<Doctor>) request.getSession().getAttribute("doctorList");
@@ -91,7 +94,7 @@ public class DoctorListController {
 		
 		PaginationContext.setPageSize(15);
 		PageHelper.startPage(PaginationContext.getPageNum(), PaginationContext.getPageSize());
-		doctors = doctorService.getDoctorList();
+		doctors = doctorService.getDoctorList(name);
 		PageInfo<Doctor> pageInfo = new PageInfo<>(doctors);
 		
 		request.getSession().setAttribute("doctorList", pageInfo);
@@ -114,10 +117,10 @@ public class DoctorListController {
 	
 	@RequestMapping("/exportDoctorList")
 	public void exportDoctorList(HttpServletRequest request,HttpServletResponse response, Model model){
-		System.out.println("start");
-		System.out.println(request.getParameter("name"));
+//		System.out.println("start");
+//		System.out.println(request.getParameter("name"));
 		List<Doctor> doctors = new ArrayList<>();
-		doctors = doctorService.getDoctorList();
+		doctors = doctorService.getDoctorList(null);
 		
 		try {
 			//excel基本设定

@@ -21,13 +21,11 @@
 		<div class="row-fluid">
 			<div class="col-xs-6 span4"></div>
 			<div class="col-xs-6 span4">
-				<center>
-					<h3>登录</h3>
-				</center>
-				<form class="form-horizontal" action="login" method="post">
+					<h3 align="center">登录</h3>
+				<form class="form-horizontal" action="../user/login" method="post">
 					<c:if test='${not empty message}'>
 						<div class="control-group" id="prompt">
-							<center style="color:red" id="message"><%=request.getAttribute("message") %></center>
+							<p style="color:red" align="center" id="message"><%=request.getAttribute("message") %></p>
 						</div>
 					</c:if>
 					<div class="control-group">

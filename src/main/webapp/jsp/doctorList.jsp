@@ -11,13 +11,11 @@
 <script type="text/javascript" src="../bootstrap/js/bootstrap.min.js"></script>
 </head>
 <body>
-<script type="text/javascript" language="java">
+<script type="text/javascript">
 	function exportDoctorList() {//页面异步请求
 	    var url = "../doctor/exportDoctorList";
 	    window.open(url);
 	};
-	
-	
 	
 </script>
 

@@ -36,7 +36,7 @@ public class TestDoctor {
 	@Test
 	public void test2(){
 		List<Doctor> doctors = new ArrayList<>();
-		doctors = doctorService.getDoctorList();
+		doctors = doctorService.getDoctorList("");
 		System.out.println(doctors.size());
 	}
 	
@@ -44,7 +44,7 @@ public class TestDoctor {
 	public void test3(){
 		PageHelper.startPage(1, 20); // 核心分页代码  
 		List<Doctor> doctors = new ArrayList<>();
-		doctors = doctorService.getDoctorList();
+		doctors = doctorService.getDoctorList("");
 		PageInfo<Doctor> pageInfo = new PageInfo<>(doctors);
         for (Doctor column : doctors) {  
             System.out.println(column.getName());  
@@ -58,7 +58,7 @@ public class TestDoctor {
 			PaginationContext.setPageSize(15);
 		}
 		PageHelper.startPage(PaginationContext.getPageNum(), PaginationContext.getPageSize());
-		doctors = doctorService.getDoctorList();
+		doctors = doctorService.getDoctorList("");
 		PageInfo<Doctor> pageInfo = new PageInfo<>(doctors);
 		for(Doctor doctor : pageInfo.getList()){
 			System.out.println(JSON.toJSONString(doctor));

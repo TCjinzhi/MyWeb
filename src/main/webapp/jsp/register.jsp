@@ -13,7 +13,7 @@
 <title>注册</title>
 </head>
 <body>
-	<script language="javascript">
+	<script type="text/javascript">
 		function checkUsername() {//页面异步请求
 			var userName = $("#userName").val();
 			if (userName == "") {
@@ -70,9 +70,7 @@
 					<div id="message" class="control-group" >
 					</div>
 				</div>
-				<center>
-					<h3>注册</h3>
-				</center>
+					<h3 align="center">注册</h3>
 				<br/>
 				<form class="form-horizontal" action="../user/register"
 					method="post">

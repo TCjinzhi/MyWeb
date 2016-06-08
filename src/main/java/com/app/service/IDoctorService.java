@@ -7,5 +7,5 @@ import com.app.pojo.Doctor;
 public interface IDoctorService {
 	Doctor getDoctorById(Integer id);
 	
-	List<Doctor> getDoctorList();
+	List<Doctor> getDoctorList(String name);
 }

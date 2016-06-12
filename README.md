@@ -8,7 +8,7 @@
  - maven 3.3.9
  - tomcat 8.0
  - mysql 5.7.12
-##功能说明
+##功能说明##
  - springMVC+mybatis架构
  - bootstrap、AmazeUI、umeditor等前端框架应用
  - websocket 多人聊天室

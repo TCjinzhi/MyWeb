@@ -96,7 +96,7 @@
 		socket = new WebSocket("ws://"+ window.location.host+"/${pageContext.request.contextPath}/wechat");
 		//连接创建后调用
 		socket.onopen = function() {
-			$("#message-list").append("连接成功...<br/>");
+			$("#message-list").append($('#nickname').val()+"进入聊天室<br/>");
 		};
 		//接收到服务器消息后调用
 		socket.onmessage = function(message) {
@@ -119,7 +119,7 @@
 		};
 		//关闭连接的时候调用
 		socket.onclose = function(){
-			alert("close");
+			$("#message-list").append($('#nickname').val()+"退出聊天室<br/>");
 		};
 		//出错时调用
 		socket.onerror = function() {

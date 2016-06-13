@@ -62,20 +62,20 @@ public class Socket {
             }
         }
       }
-    /**
-     * 广播给所有人
-     * @param message
-     */
-    public static void broadcastAll(String type,String message){
-        Set<Map.Entry<String,Session>> set = sessionMap.entrySet();
-        for(Map.Entry<String,Session> i: set){
-            try {
-            	i.getValue().getBasicRemote().sendText("{type:'"+type+"',text:'"+message+"'}");
-            } catch (Exception e) {
-                e.printStackTrace();
-            }
-        }
-    }
+//    /**
+//     * 广播给所有人
+//     * @param message
+//     */
+//    public static void broadcastAll(String type,String message){
+//        Set<Map.Entry<String,Session>> set = sessionMap.entrySet();
+//        for(Map.Entry<String,Session> i: set){
+//            try {
+//            	i.getValue().getBasicRemote().sendText("{type:'"+type+"',text:'"+message+"'}");
+//            } catch (Exception e) {
+//                e.printStackTrace();
+//            }
+//        }
+//    }
 
     @OnClose
     public void onClose(Session session, CloseReason closeReason) {

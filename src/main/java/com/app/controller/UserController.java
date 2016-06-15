@@ -42,6 +42,8 @@ public class UserController {
     
     @RequestMapping("/login")
     public String login(HttpServletRequest request,Model model){
+    	System.out.println("code from page"+request.getParameter("veryCode"));
+    	System.out.println("code from session"+request.getSession().getAttribute("code"));
     	String username;
     	String password;
     	if(request.getSession().getAttribute("username") != null){
@@ -61,6 +63,10 @@ public class UserController {
     	if(count>0){
     		request.getSession().setAttribute("username", username);
     		request.getSession().setAttribute("password", password);
+    		if(!request.getParameter("veryCode").equalsIgnoreCase(request.getSession().getAttribute("code").toString())){
+    			request.setAttribute("message", "验证码错误");
+    			return "login";
+    		}
     		return "homePage";
     	}
     	request.setAttribute("message", "账号或密码不正确");

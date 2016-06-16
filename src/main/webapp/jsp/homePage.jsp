@@ -45,9 +45,9 @@
 					</p> -->
 					<h2>U转诊后台管理系统</h2>
 					<p>坐席辅助平台</p>
-					<a class="btn btn-primary btn-large"
+					<!-- <a class="btn btn-primary btn-large"
 					href="../jsp/patient.jsp">患者列表
-					</a>
+					</a> -->
 					<a class="btn btn-primary btn-large" 
 						href="../doctor/doctorList">医生列表
 					</a>

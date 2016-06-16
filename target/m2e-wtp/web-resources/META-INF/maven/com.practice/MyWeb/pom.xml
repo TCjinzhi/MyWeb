@@ -140,6 +140,12 @@
 			<scope>compile</scope>
 		</dependency>
 
+		<!-- javamail -->
+		<dependency>
+			<groupId>javax.mail</groupId>
+			<artifactId>mail</artifactId>
+			<version>1.4.7</version>
+		</dependency>
 		<!-- 日志文件管理包 -->
 		<!-- log start -->
 		<dependency>

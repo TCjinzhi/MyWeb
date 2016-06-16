@@ -37,7 +37,7 @@
     from doctor
     where 1=1
     <if test="name != null" >
-    and name = #{name}
+    and name like '%${name}%'
     </if>
     order by id
   </select>

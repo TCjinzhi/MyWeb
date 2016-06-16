@@ -42,8 +42,6 @@ public class UserController {
     
     @RequestMapping("/login")
     public String login(HttpServletRequest request,Model model){
-    	System.out.println("code from page"+request.getParameter("veryCode"));
-    	System.out.println("code from session"+request.getSession().getAttribute("code"));
     	String username;
     	String password;
     	if(request.getSession().getAttribute("username") != null){

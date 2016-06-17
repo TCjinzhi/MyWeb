@@ -5,6 +5,12 @@ import javax.mail.Session;
 import javax.mail.Transport;
 import javax.mail.internet.InternetAddress;
 import javax.mail.internet.MimeMessage;
+
+import org.junit.Test;
+
+import com.app.commonTool.MailUtil;
+import com.app.pojo.Mail;
+
 import java.util.Date;
 import java.util.Properties;
 
@@ -46,4 +52,35 @@ public class TestMail {
                 "<a>html 元素</a>：<b>邮件内容</b>");
         System.out.println("1111111111111");
     }
+    
+    @SuppressWarnings("static-access")
+	@Test
+    public void testmailutil(){
+    	MailUtil mailUtil = new MailUtil();
+    	try {
+			mailUtil.sendMail("zhanghaojie1@sinopharm.com", "zhanghaojie1", "MailPwdUpdate0511",
+			        "550727632@qq.com",
+			        "Java Mail 测试邮件",
+			        "<a>html 元素</a>：<b>This is a java test</b>");
+		} catch (Exception e) {
+			System.out.println("发送失败");
+			e.printStackTrace();
+		}
+    }
+    
+    @Test
+    public void test2(){
+    	Mail mail = new Mail("zhanghaojie1@sinopharm.com", "zhanghaojie1", "MailPwdUpdate0511",
+		        "550727632@qq.com",
+		        "Java Mail 测试邮件",
+		        "<a>html 元素</a>：<b>This is a java test</b>");
+    	try {
+			MailUtil.sendMail(mail);
+			System.out.println("success");
+		} catch (Exception e) {
+			System.out.println("error");
+			e.printStackTrace();
+		}
+    }
+    
 }

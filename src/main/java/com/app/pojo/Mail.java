@@ -8,60 +8,52 @@ public class Mail implements Serializable {
 	
 	public static final String ENCODING = "utf-8";
 
-	private String host; // 服务器地址
-
-	private String sender; // 发件人的邮箱
-
-	private String receiver; // 收件人的邮箱
-
-	private String name; // 发件人昵称
-
-	private String username; // 账号
-
-	private String password; // 密码
-
-	private String subject; // 主题
-
-	private String message; // 信息(支持HTML)
-
-	public String getHost() {
-		return host;
+	 //发送邮箱
+	private String fromMail;
+	
+	//用户名
+	private String user;
+	
+	//密码
+	private String password;
+	
+	//目的邮箱
+	private String toMail;
+	
+	//邮件标题
+	private String mailTitle;
+	
+	//邮件内容
+	private String mailContent;
+	
+	public Mail() {
+		super();
 	}
 
-	public void setHost(String host) {
-		this.host = host;
+	public Mail(String fromMail, String user, String password, String toMail, String mailTitle, String mailContent) {
+		super();
+		this.fromMail = fromMail;
+		this.user = user;
+		this.password = password;
+		this.toMail = toMail;
+		this.mailTitle = mailTitle;
+		this.mailContent = mailContent;
 	}
 
-	public String getSender() {
-		return sender;
+	public String getFromMail() {
+		return fromMail;
 	}
 
-	public void setSender(String sender) {
-		this.sender = sender;
+	public void setFromMail(String fromMail) {
+		this.fromMail = fromMail;
 	}
 
-	public String getReceiver() {
-		return receiver;
+	public String getUser() {
+		return user;
 	}
 
-	public void setReceiver(String receiver) {
-		this.receiver = receiver;
-	}
-
-	public String getName() {
-		return name;
-	}
-
-	public void setName(String name) {
-		this.name = name;
-	}
-
-	public String getUsername() {
-		return username;
-	}
-
-	public void setUsername(String username) {
-		this.username = username;
+	public void setUser(String user) {
+		this.user = user;
 	}
 
 	public String getPassword() {
@@ -72,20 +64,30 @@ public class Mail implements Serializable {
 		this.password = password;
 	}
 
-	public String getSubject() {
-		return subject;
+	public String getToMail() {
+		return toMail;
 	}
 
-	public void setSubject(String subject) {
-		this.subject = subject;
+	public void setToMail(String toMail) {
+		this.toMail = toMail;
 	}
 
-	public String getMessage() {
-		return message;
+	public String getMailTitle() {
+		return mailTitle;
 	}
 
-	public void setMessage(String message) {
-		this.message = message;
+	public void setMailTitle(String mailTitle) {
+		this.mailTitle = mailTitle;
 	}
+
+	public String getMailContent() {
+		return mailContent;
+	}
+
+	public void setMailContent(String mailContent) {
+		this.mailContent = mailContent;
+	}
+
+	
 
 }

@@ -5,7 +5,7 @@
 <html>
 <head>
 <script type="text/javascript" src="../bootstrap/js/jquery-2.0.0.min.js"></script>
-<script type="text/javascript" src="../bootstrap//js/jquery-ui.js"></script>
+<script type="text/javascript" src="../bootstrap/js/jquery-ui.js"></script>
 <link href="../bootstrap/css/bootstrap-combined.min.css"
 	rel="stylesheet" media="screen">
 <script type="text/javascript" src="../bootstrap/js/bootstrap.min.js"></script>

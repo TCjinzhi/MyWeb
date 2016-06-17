@@ -21,7 +21,7 @@
 			<div class="span12">
 				<ul class="nav nav-pills">
 					<li class="active"><a href="#">首页</a></li>
-					<li><a href="../jsp/personalCenter.jsp"> ${username}</a></li>
+					<li><a href="<%=request.getContextPath()%>/jsp/personalCenter.jsp"> ${username}</a></li>
 					<li class="disabled"><a href="#">信息</a></li>
 					<li class="dropdown pull-right"><a href="#"
 						data-toggle="dropdown" class="dropdown-toggle">设置<strong

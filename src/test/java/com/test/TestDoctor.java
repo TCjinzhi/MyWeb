@@ -45,6 +45,7 @@ public class TestDoctor {
 		PageHelper.startPage(1, 20); // 核心分页代码  
 		List<Doctor> doctors = new ArrayList<>();
 		doctors = doctorService.getDoctorList("");
+		@SuppressWarnings("unused")
 		PageInfo<Doctor> pageInfo = new PageInfo<>(doctors);
         for (Doctor column : doctors) {  
             System.out.println(column.getName());  

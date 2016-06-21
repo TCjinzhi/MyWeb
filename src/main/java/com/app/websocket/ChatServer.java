@@ -4,7 +4,6 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.Hashtable;
 import java.util.Map;
-import java.util.Set;
 import java.util.logging.Logger;
 
 import javax.websocket.CloseReason;

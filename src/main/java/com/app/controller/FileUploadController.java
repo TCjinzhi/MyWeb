@@ -116,6 +116,7 @@ public class FileUploadController {
 			// 如果文件不存在
 			if (!file.exists()) {
 				request.setAttribute("message", "您要下载的资源已被删除！！");
+				return;
 			}
 			// 处理文件名
 			String realname = fileName.substring(fileName.indexOf("_") + 1);

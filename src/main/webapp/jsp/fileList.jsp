@@ -7,6 +7,7 @@
   </head>
   
   <body>
+    <c:out value="${message}"></c:out>
       <!-- 遍历Map集合 -->
     <c:forEach var="me" items="${fileNameMap}">
         <c:url value="/upload/download" var="downurl">

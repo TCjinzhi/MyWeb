@@ -3,7 +3,6 @@ package com.app.commonTool;
 import java.util.Date;
 import java.util.Properties;
 
-import javax.json.Json;
 import javax.mail.Message;
 import javax.mail.Session;
 import javax.mail.Transport;
@@ -14,7 +13,6 @@ import org.apache.log4j.Logger;
 
 import com.alibaba.fastjson.JSON;
 import com.app.pojo.Mail;
-import com.mysql.jdbc.Util;
 
 public class MailUtil {
 

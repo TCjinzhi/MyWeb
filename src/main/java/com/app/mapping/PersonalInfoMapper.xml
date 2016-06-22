@@ -62,4 +62,39 @@
 		</trim>
 	</insert>
 
+	<select id="checkUsername" resultType="java.lang.Integer" parameterType="java.lang.String">
+		select count(*) from 
+		personalInfo 
+		where username = #{username} 
+	</select>
+	
+	<update id="updatePersonalInfo" parameterType="com.app.pojo.PersonalInfo">
+		update personalInfo 
+		<set>
+			<if test="realname != null">
+				realname = #{realname},
+			</if>
+			<if test="email != null">
+				email = #{email},
+			</if>
+			<if test="telephone != null">
+				telephone = #{telephone},
+			</if>
+			<if test="qq != null">
+				qq = #{qq},
+			</if>
+			<if test="twitter != null">
+				twitter = #{twitter},
+			</if>
+			<if test="intro != null">
+				intro = #{intro},
+			</if>
+		</set>
+		<where>
+			<if test="username != null">
+				username = #{username}
+			</if>
+		</where>
+	</update>
+
 </mapper>

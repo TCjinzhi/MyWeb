@@ -19,4 +19,14 @@ public class PersonalInfoServiceImpl implements IPersonalInfoService{
 		return personalInfoDao.insertAtFirst(personalInfo);
 	}
 
+	@Override
+	public int checkUsername(String username) {
+		return personalInfoDao.checkUsername(username);
+	}
+
+	@Override
+	public int updatePersonalInfo(PersonalInfo personalInfo) {
+		return personalInfoDao.updatePersonalInfo(personalInfo);
+	}
+
 }

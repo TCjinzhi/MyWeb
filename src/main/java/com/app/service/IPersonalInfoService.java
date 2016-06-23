@@ -8,4 +8,6 @@ public interface IPersonalInfoService {
 	int checkUsername(String username);
 
 	int updatePersonalInfo(PersonalInfo personalInfo);
+	
+	int uploadImage(String hashImage,String image,String username);
 }

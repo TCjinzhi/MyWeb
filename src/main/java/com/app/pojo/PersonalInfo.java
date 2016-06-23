@@ -20,6 +20,9 @@ public class PersonalInfo implements Serializable{
 	
 	private String intro;
 	
+	//image路径的hash值，建立索引提升搜索速度
+	private String imageHash;
+	
 	private String image;
 
 	public PersonalInfo() {
@@ -94,6 +97,15 @@ public class PersonalInfo implements Serializable{
 
 	public void setIntro(String intro) {
 		this.intro = intro;
+	}
+	
+
+	public String getImageHash() {
+		return imageHash;
+	}
+
+	public void setImageHash(String imageHash) {
+		this.imageHash = imageHash;
 	}
 
 	public String getImage() {

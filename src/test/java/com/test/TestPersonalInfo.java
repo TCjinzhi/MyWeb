@@ -44,10 +44,16 @@ public class TestPersonalInfo {
 													"sino@admin",
 													"15721347732",
 													"550727632",
-													"执念saying",
+													"执念saying", 
 													"管理员",
 													null);
 		int result = personalInfoService.updatePersonalInfo(personalInfo);
+		System.out.println(result);
+	}
+	
+	@Test
+	public void uploadImage(){
+		int result = personalInfoService.uploadImage("111111", "22222222", "amdin");
 		System.out.println(result);
 	}
 }

@@ -10,6 +10,7 @@
 		<result column="qq" property="qq" jdbcType="VARCHAR"/>
 		<result column="twitter" property="twitter" jdbcType="VARCHAR"/>
 		<result column="intro" property="intro" jdbcType="VARCHAR"/>
+		<result column="hashImage" property="hashImage" jdbcType="VARCHAR"/>
 		<result column="image" property="image" jdbcType="VARCHAR"/>
 	</resultMap>
 	<insert id="insertAtFirst" parameterType="com.app.pojo.PersonalInfo">
@@ -88,6 +89,23 @@
 			</if>
 			<if test="intro != null">
 				intro = #{intro},
+			</if>
+		</set>
+		<where>
+			<if test="username != null">
+				username = #{username}
+			</if>
+		</where>
+	</update>
+	
+	<update id="uploadImage">
+		update personalInfo 
+		<set>
+			<if test="hashImage != null">
+				imageHash = #{hashImage},
+			</if>
+			<if test="image != null">
+				image = #{image},
 			</if>
 		</set>
 		<where>

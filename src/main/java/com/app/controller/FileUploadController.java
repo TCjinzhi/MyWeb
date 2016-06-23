@@ -63,7 +63,10 @@ public class FileUploadController {
 
 						// 得到文件的保存目录
 						String realSavePath = makePath(saveFilename, path);
-
+						
+						String image = realSavePath+"\\"+saveFilename;
+						System.out.println(image);
+						
 						File localFile = new File(realSavePath, saveFilename);
 						try {
 							file.transferTo(localFile);

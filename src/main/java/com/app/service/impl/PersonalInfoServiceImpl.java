@@ -29,4 +29,9 @@ public class PersonalInfoServiceImpl implements IPersonalInfoService{
 		return personalInfoDao.updatePersonalInfo(personalInfo);
 	}
 
+	@Override
+	public int uploadImage(String hashImage, String image, String username) {
+		return personalInfoDao.uploadImage(hashImage, image, username);
+	}
+
 }

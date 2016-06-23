@@ -10,4 +10,6 @@ public interface PersonalInfoMapper {
 	int checkUsername(@Param(value="username")String username);
 
 	int updatePersonalInfo(PersonalInfo personalInfo);
+	
+	int uploadImage(@Param(value="hashImage")String hashImage,@Param(value="image")String image,@Param(value="username")String username);
 }

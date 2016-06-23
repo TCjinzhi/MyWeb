@@ -108,9 +108,9 @@ public class PersonalInfoController {
 							// 保存数据库
 							int result = personalInfoService.uploadImage(hashImage, image, username);
 							if(result > 0){
-								model.addAttribute("message","保存成功");
+								model.addAttribute("uploadResult","保存成功");
 							}else {
-								model.addAttribute("message","发生错误，请重新提交");
+								model.addAttribute("uploadResult","发生错误，请重新提交");
 							}
 						} catch (IllegalStateException e) {
 							e.printStackTrace();

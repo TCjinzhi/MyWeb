@@ -112,7 +112,7 @@
                     <div class="am-form-group">
                       <input type="file" id="user-pic" name="user-pic">
                       <p class="am-form-help">请选择要上传的文件...</p>
-                      <button type="submit" class="am-btn am-btn-primary am-btn-xs">保存</button>
+                      <button type="submit" class="am-btn am-btn-primary am-btn-xs">保存</button><span style="color:blue"><c:out value="${uploadResult}"></c:out></span>
                     </div>
                   </form>
                 </div>

@@ -27,8 +27,9 @@ public class PersonalInfoController {
 	
 	@RequestMapping("/personalCenter")
 	public String personalInfo(HttpServletRequest request,Model model){
-		
-		
+		PersonalInfo personalInfo = new PersonalInfo();
+		personalInfo = personalInfoService.personalCenter((String)request.getSession().getAttribute("username"));
+		model.addAttribute(personalInfo);
 		return "personalCenter";
 	}
 	

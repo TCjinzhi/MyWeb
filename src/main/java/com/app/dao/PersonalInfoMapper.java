@@ -12,4 +12,6 @@ public interface PersonalInfoMapper {
 	int updatePersonalInfo(PersonalInfo personalInfo);
 	
 	int uploadImage(@Param(value="hashImage")String hashImage,@Param(value="image")String image,@Param(value="username")String username);
+	
+	PersonalInfo personalCenter(@Param(value="username") String username);
 }

@@ -25,6 +25,13 @@ public class PersonalInfoController {
 	@Resource
 	private IPersonalInfoService personalInfoService;
 	
+	@RequestMapping("/personalCenter")
+	public String personalInfo(HttpServletRequest request,Model model){
+		
+		
+		return "personalCenter";
+	}
+	
 	@RequestMapping("/insertOrUpdate")
 	public String insertAtFirst(HttpServletRequest request,Model model){
 		PersonalInfo personalInfo = new PersonalInfo();

@@ -10,9 +10,13 @@
 		<result column="qq" property="qq" jdbcType="VARCHAR"/>
 		<result column="twitter" property="twitter" jdbcType="VARCHAR"/>
 		<result column="intro" property="intro" jdbcType="VARCHAR"/>
-		<result column="hashImage" property="hashImage" jdbcType="VARCHAR"/>
+		<result column="imagehash" property="imageHash" jdbcType="VARCHAR"/>
 		<result column="image" property="image" jdbcType="VARCHAR"/>
 	</resultMap>
+	
+	<sql id="Base_List">
+		id,username,realname,email,telephone,qq,twitter,intro,imagehash,image	
+	</sql>
 	<insert id="insertAtFirst" parameterType="com.app.pojo.PersonalInfo">
 		insert into personalinfo
 		<trim prefix="(" suffix=")" suffixOverrides=",">
@@ -114,5 +118,14 @@
 			</if>
 		</where>
 	</update>
+	
+	<select id="personalCenter" resultMap="BaseResultMap" parameterType="java.lang.String">
+			select 
+		<include refid="Base_List" />
+			from personalInfo
+		<where>
+			username = #{username,jdbcType=VARCHAR}
+		</where>
+	</select>
 
 </mapper>

@@ -7,6 +7,7 @@ import org.junit.runner.RunWith;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
+import com.alibaba.fastjson.JSON;
 import com.app.pojo.PersonalInfo;
 import com.app.service.IPersonalInfoService;
 
@@ -55,5 +56,13 @@ public class TestPersonalInfo {
 	public void uploadImage(){
 		int result = personalInfoService.uploadImage("111111", "22222222", "amdin");
 		System.out.println(result);
+	}
+	
+	
+	@Test
+	public void personalCenterTest(){
+		PersonalInfo personalInfo = new PersonalInfo();
+		personalInfo = personalInfoService.personalCenter("admin");
+		System.out.println(JSON.toJSONString(personalInfo));
 	}
 }

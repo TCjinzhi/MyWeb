@@ -6,6 +6,8 @@ public class PersonalInfo implements Serializable{
 
 	private static final long serialVersionUID = 1L;
 	
+	private Integer id;
+	
 	private String username;
 	
 	private String realname;
@@ -40,6 +42,15 @@ public class PersonalInfo implements Serializable{
 		this.twitter = twitter;
 		this.intro = intro;
 		this.image = image;
+	}
+
+	
+	public Integer getId() {
+		return id;
+	}
+
+	public void setId(Integer id) {
+		this.id = id;
 	}
 
 	public String getUsername() {

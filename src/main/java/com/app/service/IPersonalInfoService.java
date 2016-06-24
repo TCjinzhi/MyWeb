@@ -10,4 +10,6 @@ public interface IPersonalInfoService {
 	int updatePersonalInfo(PersonalInfo personalInfo);
 	
 	int uploadImage(String hashImage,String image,String username);
+	
+	PersonalInfo personalCenter(String username);
 }

@@ -1,7 +1,6 @@
 package com.app.controller;
 
 import javax.servlet.http.HttpServletRequest;
-
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -13,6 +12,12 @@ import com.app.pojo.Mail;
 @Controller
 @RequestMapping("/mail")
 public class MailController {
+	
+	
+	@RequestMapping("/email")
+	public String EmailAddress(HttpServletRequest request, Model model){
+		return "sendMail";
+	}
 
 	@RequestMapping("/sendmail")
 	public String sendmail(HttpServletRequest request,Model model){

@@ -16,6 +16,7 @@ public class MailController {
 	
 	@RequestMapping("/email")
 	public String EmailAddress(HttpServletRequest request, Model model){
+//		model.addAttribute("username", request.getSession().getAttribute("username"));
 		return "sendMail";
 	}
 

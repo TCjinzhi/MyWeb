@@ -54,5 +54,24 @@
 		<!-- 内存中的最大值 -->
 		<property name="maxInMemorySize" value="40960" />
 	</bean>
+	    <!-- session timeout interceptor -->
+	<mvc:interceptors>
+		<mvc:interceptor>
+			<mvc:mapping path="/personalInfo/*" />
+			<mvc:mapping path="/mail/*" />
+			<bean class="com.app.commonTool.SessionInterceptor" >
+				<property name="allowUrls">  
+	            <list>  
+	              <!-- 如果请求中包含以下路径，则不进行拦截 -->  
+	              <value>/index</value>  
+	              <value>/js</value>  
+	              <value>/css</value>  
+	              <value>/image</value>  
+	              <value>/images</value>  
+	            </list>  
+	          </property>
+		    </bean>
+		</mvc:interceptor>
+	</mvc:interceptors>
 
 </beans>  

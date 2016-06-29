@@ -66,8 +66,8 @@
 	              <value>/index</value>  
 	              <value>/js</value>  
 	              <value>/css</value>  
-	              <value>/image</value>  
-	              <value>/images</value>  
+	              <value>/image</value>
+	              <value>/images</value> 
 	            </list>  
 	          </property>
 		    </bean>

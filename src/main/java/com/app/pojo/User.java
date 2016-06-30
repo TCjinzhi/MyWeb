@@ -2,6 +2,9 @@ package com.app.pojo;
 
 import java.io.Serializable;
 
+import javax.xml.bind.annotation.XmlRootElement;
+
+@XmlRootElement(name="User")
 public class User implements Serializable {
 	
 	//序列换的版本控制

@@ -13,5 +13,8 @@
  * springMVC+mybatis架构
  * bootstrap、AmazeUI、umeditor等前端框架应用
  * websocket 多人聊天室
+ * ajax异步刷新
  * mybatis分页工具PageHelper
+ * cxf实现WebService  Soap & Restful
+ * 使用druid内置的监控
 

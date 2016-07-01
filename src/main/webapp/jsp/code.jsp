@@ -5,7 +5,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>test verify code</title>
-<script type="text/javascript" src="../bootstrap/js/jquery-2.0.0.min.js"></script>
+<script type="text/javascript" src="${pageContext.request.contextPath}/bootstrap/js/jquery-2.0.0.min.js"></script>
 </head>
 <body>
 	<input id="veryCode" name="veryCode" type="text" />

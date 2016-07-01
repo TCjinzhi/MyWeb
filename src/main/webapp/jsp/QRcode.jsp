@@ -4,8 +4,8 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-<link rel="stylesheet" href="../assets/css/amazeui.min.css">
-<link rel="stylesheet" href="../assets/css/app.css">
+<link rel="stylesheet" href="${pageContext.request.contextPath}/assets/css/amazeui.min.css">
+<link rel="stylesheet" href="${pageContext.request.contextPath}/assets/css/app.css">
 <title>二维码</title>
 </head>
 <body>
@@ -16,8 +16,8 @@
 		</span>
 	</div>
 	<div id="doc-qrcode" class="am-text-center"></div>
-	<script src="../assets/js/jquery.min.js"></script>
-	<script src="../assets/js/amazeui.min.js"></script>
+	<script src="${pageContext.request.contextPath}/assets/js/jquery.min.js"></script>
+	<script src="${pageContext.request.contextPath}/assets/js/amazeui.min.js"></script>
 	<script>
 		$(function() {
 			var $input = $('#doc-qr-text');

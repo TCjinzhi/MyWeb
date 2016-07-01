@@ -6,8 +6,8 @@
 	<meta charset="UTF-8">
 	<title>404</title>
 	<link rel="stylesheet" href="../css/style.css">
-	<script src="../js/jquery.js"></script>
-	<script src="../js/public.js"></script>
+	<script src="${pageContext.request.contextPath}/js/jquery.js"></script>
+	<script src="${pageContext.request.contextPath}/js/public.js"></script>
 </head>
 <body>
 <div id="content" class="cf">

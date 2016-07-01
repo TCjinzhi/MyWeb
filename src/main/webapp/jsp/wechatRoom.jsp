@@ -12,11 +12,11 @@
 <meta name="renderer" content="webkit">
 <!-- No Baidu Siteapp-->
 <meta http-equiv="Cache-Control" content="no-siteapp" />
-<link rel="alternate icon" href="../assets/i/favicon.ico">
-<link rel="stylesheet" href="../assets/css/amazeui.min.css">
-<link rel="stylesheet" href="../assets/css/app.css">
+<link rel="alternate icon" href="${pageContext.request.contextPath}/assets/i/favicon.ico">
+<link rel="stylesheet" href="${pageContext.request.contextPath}/assets/css/amazeui.min.css">
+<link rel="stylesheet" href="${pageContext.request.contextPath}/assets/css/app.css">
 <!-- umeditor css -->
-<link href="../umeditor/themes/default/css/umeditor.css"
+<link href="${pageContext.request.contextPath}/umeditor/themes/default/css/umeditor.css"
 	rel="stylesheet">
 <style>
 .title {
@@ -85,9 +85,9 @@
   <script src="http://libs.baidu.com/jquery/1.11.1/jquery.min.js"></script>
   <![endif]-->
 	<!-- umeditor js -->
-	<script charset="utf-8" src="../umeditor/umeditor.config.js"></script>
-	<script charset="utf-8" src="../umeditor/umeditor.min.js"></script>
-	<script src="../umeditor/lang/zh-cn/zh-cn.js"></script>
+	<script charset="utf-8" src="${pageContext.request.contextPath}/umeditor/umeditor.config.js"></script>
+	<script charset="utf-8" src="${pageContext.request.contextPath}/umeditor/umeditor.min.js"></script>
+	<script src="${pageContext.request.contextPath}/umeditor/lang/zh-cn/zh-cn.js"></script>
 	<script>
 		$(function() {
 			// 初始化消息输入框

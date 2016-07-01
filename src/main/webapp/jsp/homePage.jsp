@@ -5,14 +5,14 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <script type="text/javascript"
-	src="../bootstrap/js/jquery-2.0.0.min.js"></script>
+	src="${pageContext.request.contextPath}/bootstrap/js/jquery-2.0.0.min.js"></script>
 <script type="text/javascript"
-	src="../bootstrap/js/jquery-ui.js"></script>
+	src="${pageContext.request.contextPath}/bootstrap/js/jquery-ui.js"></script>
 <link
-	href="../bootstrap/css/bootstrap-combined.min.css"
+	href="${pageContext.request.contextPath}/bootstrap/css/bootstrap-combined.min.css"
 	rel="stylesheet" media="screen">
 <script type="text/javascript"
-	src="../bootstrap/js/bootstrap.min.js"></script>
+	src="${pageContext.request.contextPath}/bootstrap/js/bootstrap.min.js"></script>
 <title>首页</title>
 </head>
 <body>

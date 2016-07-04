@@ -12,7 +12,7 @@ import com.app.pojo.PersonalInfo;
 import com.app.service.IPersonalInfoService;
 
 @RunWith(SpringJUnit4ClassRunner.class)
-@ContextConfiguration(locations={"classpath:spring-mybatis.xml"})
+@ContextConfiguration(locations={"classpath:spring-mybatis.xml","classpath:spring-mvc.xml"})
 public class TestPersonalInfo {
 
 	@Resource

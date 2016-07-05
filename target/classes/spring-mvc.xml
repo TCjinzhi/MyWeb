@@ -11,12 +11,13 @@
                         http://www.springframework.org/schema/aop/spring-aop-3.1.xsd  
                         http://www.springframework.org/schema/mvc    
                         http://www.springframework.org/schema/mvc/spring-mvc-4.0.xsd">
-	<!-- 开启aop -->
-	<aop:aspectj-autoproxy />
+	
 	<!-- 自动扫描该包，使SpringMVC认为包下用了@controller注解的类是控制器;扫描@Aspect -->
 	<context:component-scan base-package="com.app" />
 	<!-- 开启springMVC注解模式 -->
 	<mvc:annotation-driven />
+	<!-- 开启aop proxy-target-class="true":强制使用ciglib代理-->
+	<aop:aspectj-autoproxy proxy-target-class="true"/>
 	<!-- 静态资源默认servletp配置 (1).加入对静态资源的处理：js,gif,png等 (2).允许使用“/”做整体配置 -->
 	<mvc:default-servlet-handler />
 	<!--避免IE执行AJAX时，返回JSON出现下载文件 -->

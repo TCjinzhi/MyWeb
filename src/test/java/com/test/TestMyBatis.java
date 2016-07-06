@@ -46,8 +46,8 @@ public class TestMyBatis {
 	
 	@Test
 	public void test3(){
-		int count = userService.checkUsername("zdsda");
-		System.out.println(count);
+		User count = userService.checkUsername("admin");
+		System.out.println(JSON.toJSONString(count));
 	}
 	
 }

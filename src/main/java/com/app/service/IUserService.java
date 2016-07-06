@@ -9,5 +9,5 @@ public interface IUserService {
 	
 	public int insert(User user);
 
-	public int checkUsername(String string);
+	public User checkUsername(String string);
 }

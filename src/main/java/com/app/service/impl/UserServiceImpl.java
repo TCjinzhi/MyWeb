@@ -29,7 +29,7 @@ public class UserServiceImpl implements IUserService {
 	}
 
 	@Override
-	public int checkUsername(String userName) {
+	public User checkUsername(String userName) {
 		return this.userDao.checkUsername(userName);
 	}
 

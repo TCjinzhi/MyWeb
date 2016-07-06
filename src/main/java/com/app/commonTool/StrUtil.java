@@ -4,7 +4,11 @@ import java.io.UnsupportedEncodingException;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 
-
+/**
+ * @describe 集成对字符串串的操作：MD5,SHA
+ * @author zhanghj
+ *
+ */
 public class StrUtil {
 
     /**  对字符串进行MD5加密     */
@@ -69,4 +73,15 @@ public class StrUtil {
             str = "";
         return str;
     }
+    /** 将传递进来的字节数组转换成十六进制的字符串形式并返回  **/
+    @SuppressWarnings("unused")
+	private static String toHex(byte[] buffer){
+         StringBuffer sb = new StringBuffer(buffer.length * 2);
+         for (int i = 0; i < buffer.length; i++){
+                sb.append(Character.forDigit((buffer[i] & 0xf0) >> 4, 16));
+                sb.append(Character.forDigit(buffer[i] & 0x0f, 16));
+         }
+         return sb.toString();
+      }
+
 }

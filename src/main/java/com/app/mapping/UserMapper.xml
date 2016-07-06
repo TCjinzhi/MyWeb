@@ -24,8 +24,9 @@
   	and password = #{1}
   </select>
   
-  <select id="checkUsername" resultType="java.lang.Integer">
-  	select count(*)
+  <select id="checkUsername" resultMap="BaseResultMap" parameterType="java.lang.String">
+  	select
+  	<include refid="Base_Column_List" />
   	from muser
   	where name = #{0}
   </select>

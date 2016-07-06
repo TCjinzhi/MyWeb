@@ -93,15 +93,14 @@ public class UserController {
     public CheckUsername checkUsername(@RequestBody User user) {
     	CheckUsername cuser = new CheckUsername();
     	cuser.setUsername(user.getUserName());
-    	int result = this.userService.checkUsername(user.getUserName());
-    	if(result == 0 ){
-    		cuser.setCode(0);
-    		cuser.setMsg("恭喜，用户名可用！");
-    	} 
-    	if(result > 0 ){
+    	User getuser = this.userService.checkUsername(user.getUserName());
+    	if(getuser != null ){
     		cuser.setCode(1);
     		cuser.setMsg("用户名已存在！");
-    	} 
+    	} else{
+    		cuser.setCode(0);
+    		cuser.setMsg("恭喜，用户名可用！");
+    	}
     	
     	System.out.println(JSON.toJSONString(cuser));
     	return cuser;

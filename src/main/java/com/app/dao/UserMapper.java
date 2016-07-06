@@ -17,5 +17,5 @@ public interface UserMapper {
 
 	int Login(String userName, String password);
 
-	int checkUsername(String userName);
+	User checkUsername(String userName);
 }

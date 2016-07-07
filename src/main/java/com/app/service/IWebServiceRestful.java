@@ -40,7 +40,7 @@ public interface IWebServiceRestful {
 	 */
 	@POST
 	@Path("/postData")
-	public User postData(User user) throws IOException;
+	public User postData() throws IOException;
 
 	@PUT
 	@Path("/putData/{id}")

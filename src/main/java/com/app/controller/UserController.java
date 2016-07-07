@@ -2,6 +2,7 @@ package com.app.controller;
 
 import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 
 import org.apache.log4j.Logger;
 import org.springframework.stereotype.Controller;
@@ -11,6 +12,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import com.alibaba.fastjson.JSON;
+import com.app.commonTool.CookieUtil;
 import com.app.commonTool.StrUtil;
 import com.app.pojo.CheckUsername;
 import com.app.pojo.User;
@@ -41,7 +43,7 @@ public class UserController {
     }
     
     @RequestMapping("/login")
-    public String login(HttpServletRequest request,Model model){
+    public String login(HttpServletRequest request,HttpServletResponse response,Model model){
     	String username;
     	String password;
     	if(request.getSession().getAttribute("username") != null){
@@ -59,12 +61,13 @@ public class UserController {
     	int count = 0; 
     	count = this.userService.Login(username,password);
     	if(count>0){
-    		request.getSession().setAttribute("username", username);
-    		request.getSession().setAttribute("password", password);
     		if(!request.getParameter("veryCode").equalsIgnoreCase(request.getSession().getAttribute("code").toString())){
     			request.setAttribute("message", "验证码错误");
     			return "login";
     		}
+    		request.getSession().setAttribute("username", username);
+    		request.getSession().setAttribute("password", password);
+    		CookieUtil.addCookie("Keep", username+":"+password, response);
     		return "homePage";
     	}
     	request.setAttribute("message", "账号或密码不正确");

@@ -10,6 +10,7 @@ import javax.servlet.http.HttpSession;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 import org.springframework.test.context.ContextConfiguration;
+import org.springframework.web.context.request.RequestContextHolder;
 
 import com.app.pojo.User;
 import com.app.service.IUserService;
@@ -132,5 +133,36 @@ public class CookieUtil {
 		cookie.setMaxAge(0);
 		cookie.setPath("/");
 		response.addCookie(cookie);
+    }
+    
+    
+    /**
+     * Cookie 追加
+     * @return
+     * @throws Exception
+     */
+    public static void addCookie(String name,String value, HttpServletResponse response){
+        Cookie cookie = new Cookie(name, value);
+        cookie.setMaxAge(cookieMaxAge);
+        response.addCookie(cookie);
+    }
+    
+    /**
+     * Cookie 取得
+     * @return
+     * @throws Exception
+     */
+    public static String getCookie(HttpServletRequest request,String name){
+        Cookie[] cookies = request.getCookies();
+        if(cookies != null){
+            for(Cookie cookie : cookies)
+            {
+                if(cookie.getName().equals(name))
+                {
+                    return cookie.getValue();
+                }
+            }
+        }
+        return null;
     }
 }

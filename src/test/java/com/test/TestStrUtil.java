@@ -13,7 +13,7 @@ public class TestStrUtil {
 	
 	@Test
 	public void test1(){
-		String result =	StrUtil.getEncryptStr("test1");
+		String result =	StrUtil.getEncryptStr("admin");
 		System.err.println(result);
 		//f0dc70e7e86a26a7e0be2669652621b7
 	}

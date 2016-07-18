@@ -21,10 +21,11 @@ import com.alibaba.fastjson.JSON;
 import com.app.pojo.APIGift;
 import com.app.pojo.APIResponse;
 
-public class giftListThread implements Runnable {
+public class GiftListThread implements Runnable {
 
 	@Override
 	public void run() {
+		System.out.println("GiftListThread start!");
 		
 		Connection connection = null;
 		PreparedStatement preparedStatement = null;
@@ -43,7 +44,7 @@ public class giftListThread implements Runnable {
 		
 		
 		try {
-			Class.forName("com.mysql.jdbc.Driver");
+			Class.forName(driver);
 			connection = DriverManager.getConnection(url, user, password);
 			preparedStatement = connection.prepareStatement(sql);
 			

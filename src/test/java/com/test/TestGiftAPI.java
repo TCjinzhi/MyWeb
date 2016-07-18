@@ -43,7 +43,7 @@ public class TestGiftAPI {
 		
 		
 		try {
-			Class.forName("com.mysql.jdbc.Driver");
+			Class.forName(driver);
 			connection = DriverManager.getConnection(url, user, password);
 			preparedStatement = connection.prepareStatement(sql);
 			

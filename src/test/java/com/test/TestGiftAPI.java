@@ -6,8 +6,7 @@ import java.net.URISyntaxException;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.sql.Statement;
+import java.util.ResourceBundle;
 
 import org.apache.http.client.ClientProtocolException;
 import org.apache.http.client.methods.CloseableHttpResponse;
@@ -28,9 +27,15 @@ public class TestGiftAPI {
 		
 		Connection connection = null;
 		PreparedStatement preparedStatement = null;
-		String url = "jdbc:mysql://localhost/study";
-		String user = "root";
-		String password = "123456";
+		
+		ResourceBundle resourceBundle = ResourceBundle.getBundle("jdbc");
+		String driver = resourceBundle.getString("driver");
+//		String url = "jdbc:mysql://localhost/study";
+		String url = resourceBundle.getString("url");
+//		String user = "root";
+		String user = resourceBundle.getString("username");
+//		String password = "123456";
+		String password = resourceBundle.getString("password");
 		String sql = "insert into gifts (id,gift_name,gift_point,gift_image) values (?,?,?,?);";
 		
 		PreparedStatement checkps = null;

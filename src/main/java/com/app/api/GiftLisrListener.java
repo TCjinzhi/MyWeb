@@ -5,14 +5,11 @@ import javax.servlet.ServletContextListener;
 
 public class GiftLisrListener implements ServletContextListener {
 
-	private GiftListThread giftListThread;
-	
 	@Override
 	public void contextInitialized(ServletContextEvent sce) {
-		if(giftListThread == null){
-			Thread thread = new Thread(giftListThread);
-			thread.start();
-		}
+		System.out.println("---Thread start---");
+		Thread thread = new Thread(new GiftListThread());
+		thread.start();
 	}
 
 	@Override

@@ -17,4 +17,6 @@
  * mybatis分页工具PageHelper
  * cxf实现WebService  Soap & Restful
  * 使用druid内置的监控
-
+ * aspect注解方式，整个项目中加入log日志
+ * 单开线程读取第三方api数据
+ * 集成redis，本地虚拟机做redis，java使用jedis调用

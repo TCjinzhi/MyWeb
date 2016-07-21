@@ -38,6 +38,8 @@ public final class RedisUtil {
     static {
         try {
             JedisPoolConfig config = new JedisPoolConfig();
+            //jedis 2.4.0之后的版本 用setMaxTotal 代替 setMaxActive
+            config.setMaxTotal(MAX_ACTIVE);
 //            config.setMaxActive(MAX_ACTIVE);
             config.setMaxIdle(MAX_IDLE);
             config.setMaxWaitMillis(MAX_WAIT);

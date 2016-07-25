@@ -186,6 +186,13 @@
 			<version>20030825.183949</version>
 		</dependency>
 
+		<!-- ActiveMQ -->
+		<dependency>
+			<groupId>org.apache.activemq</groupId>
+			<artifactId>activemq-all</artifactId>
+			<version>5.13.4</version>
+		</dependency>
+
 		<!-- 日志文件管理包 -->
 		<!-- log start -->
 		<dependency>

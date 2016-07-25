@@ -20,3 +20,4 @@
  * aspect注解方式，整个项目中加入log日志
  * 单开线程读取第三方api数据
  * 集成redis，本地虚拟机做redis，java使用jedis调用
+ * ActiveMQ 消息队列

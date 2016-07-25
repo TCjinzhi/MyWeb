@@ -3257,3 +3257,15 @@ Caused by: java.lang.IllegalArgumentException: Cannot load an ApplicationContext
 [INFO] [2016-07-15 10:02:29][com.alibaba.druid.pool.DruidDataSource]{dataSource-1} inited
 [INFO] [2016-07-15 10:02:30][org.springframework.context.support.GenericApplicationContext]Closing org.springframework.context.support.GenericApplicationContext@7b49cea0: startup date [Fri Jul 15 10:02:29 CST 2016]; root of context hierarchy
 [INFO] [2016-07-15 10:02:30][com.alibaba.druid.pool.DruidDataSource]{dataSource-1} closed
+[INFO] [2016-07-22 11:26:04][org.apache.activemq.transport.failover.FailoverTransport]Successfully connected to tcp://localhost:61616
+[INFO] [2016-07-22 11:26:30][org.apache.activemq.transport.failover.FailoverTransport]Successfully connected to tcp://localhost:61616
+[INFO] [2016-07-22 11:27:54][org.apache.activemq.transport.failover.FailoverTransport]Successfully connected to tcp://localhost:61616
+[INFO] [2016-07-22 11:29:18][org.apache.activemq.transport.failover.FailoverTransport]Successfully connected to tcp://localhost:61616
+[INFO] [2016-07-22 11:29:27][org.apache.activemq.transport.failover.FailoverTransport]Successfully connected to tcp://localhost:61616
+[INFO] [2016-07-22 11:30:21][org.apache.activemq.transport.failover.FailoverTransport]Successfully connected to tcp://localhost:61616
+[INFO] [2016-07-22 11:32:28][org.apache.activemq.transport.failover.FailoverTransport]Successfully connected to tcp://localhost:61616
+[INFO] [2016-07-22 11:34:00][org.apache.activemq.transport.failover.FailoverTransport]Successfully connected to tcp://localhost:61616
+[INFO] [2016-07-22 13:16:18][org.apache.activemq.transport.failover.FailoverTransport]Successfully connected to tcp://localhost:61616
+[INFO] [2016-07-22 13:19:24][org.apache.activemq.transport.failover.FailoverTransport]Successfully connected to tcp://localhost:61616
+[INFO] [2016-07-22 13:22:10][org.apache.activemq.transport.failover.FailoverTransport]Successfully connected to tcp://localhost:61616
+[INFO] [2016-07-22 13:22:36][org.apache.activemq.transport.failover.FailoverTransport]Successfully connected to tcp://localhost:61616

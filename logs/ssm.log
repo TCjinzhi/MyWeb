@@ -3269,3 +3269,11 @@ Caused by: java.lang.IllegalArgumentException: Cannot load an ApplicationContext
 [INFO] [2016-07-22 13:19:24][org.apache.activemq.transport.failover.FailoverTransport]Successfully connected to tcp://localhost:61616
 [INFO] [2016-07-22 13:22:10][org.apache.activemq.transport.failover.FailoverTransport]Successfully connected to tcp://localhost:61616
 [INFO] [2016-07-22 13:22:36][org.apache.activemq.transport.failover.FailoverTransport]Successfully connected to tcp://localhost:61616
+[INFO] [2016-08-04 13:53:32][org.springframework.beans.factory.xml.XmlBeanDefinitionReader]Loading XML bean definitions from class path resource [spring-mybatis.xml]
+[INFO] [2016-08-04 13:53:32][org.springframework.context.support.GenericApplicationContext]Refreshing org.springframework.context.support.GenericApplicationContext@887af79: startup date [Thu Aug 04 13:53:32 CST 2016]; root of context hierarchy
+[INFO] [2016-08-04 13:53:32][org.springframework.beans.factory.config.PropertyPlaceholderConfigurer]Loading properties file from class path resource [jdbc.properties]
+[INFO] [2016-08-04 13:53:32][org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor]JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+[ERROR] [2016-08-04 13:53:32][com.alibaba.druid.pool.DruidAbstractDataSource]maxIdle is deprecated
+[INFO] [2016-08-04 13:53:32][com.alibaba.druid.pool.DruidDataSource]{dataSource-1} inited
+[INFO] [2016-08-04 13:53:33][org.springframework.context.support.GenericApplicationContext]Closing org.springframework.context.support.GenericApplicationContext@887af79: startup date [Thu Aug 04 13:53:32 CST 2016]; root of context hierarchy
+[INFO] [2016-08-04 13:53:33][com.alibaba.druid.pool.DruidDataSource]{dataSource-1} closed

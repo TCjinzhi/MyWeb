@@ -6,7 +6,7 @@
 	<display-name>Archetype Created Web Application</display-name>
 	<context-param>
 		<param-name>contextConfigLocation</param-name>
-		<param-value>classpath:spring-mybatis.xml classpath:application-cxf.xml</param-value>
+		<param-value>classpath:spring-mybatis.xml,classpath:application-cxf.xml</param-value>
 	</context-param>
 	<filter>
 		<filter-name>encodingFilter</filter-name>
@@ -45,7 +45,7 @@
 		<servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
 		<init-param>
 			<param-name>contextConfigLocation</param-name>
-			<param-value>classpath:spring-mvc.xml,classpath:application-quartz.xml</param-value>
+			<param-value>classpath:spring-mvc.xml</param-value>
 		</init-param>
 		<load-on-startup>1</load-on-startup>
 		<async-supported>true</async-supported>
@@ -54,6 +54,7 @@
 		<servlet-name>SpringMVC</servlet-name>
 		<url-pattern>/</url-pattern>
 	</servlet-mapping>
+	
 	<welcome-file-list>
 		<welcome-file>/jsp/login.jsp</welcome-file>
 	</welcome-file-list>

@@ -16,8 +16,6 @@ import org.apache.poi.hssf.usermodel.HSSFWorkbook;
 import org.apache.poi.hssf.util.HSSFColor;
 import org.apache.poi.ss.util.CellRangeAddress;
 
-import com.sun.jndi.url.corbaname.corbanameURLContextFactory;
-
 public class ExportExcel {
 
 	
@@ -82,6 +80,36 @@ public class ExportExcel {
 			}
 		}
 		
+		//调节单元格宽度
+		for (int colNum = 0; colNum < columnNum; colNum++) {
+            int columnWidth = sheet.getColumnWidth(colNum) / 256;
+            for (int rowNum = 0; rowNum < sheet.getLastRowNum(); rowNum++) {
+                HSSFRow currentRow;
+                //当前行未被使用过
+                if (sheet.getRow(rowNum) == null) {
+                    currentRow = sheet.createRow(rowNum);
+                } else {
+                    currentRow = sheet.getRow(rowNum);
+                }
+                if (currentRow.getCell(colNum) != null) {
+                    HSSFCell currentCell = currentRow.getCell(colNum);
+                    if (currentCell.getCellType() == HSSFCell.CELL_TYPE_STRING) {
+                        int length = currentCell.getStringCellValue().getBytes().length;
+                        if (columnWidth < length) {
+                            columnWidth = length;
+                        }
+                    }
+                }
+            }
+            if(colNum == 0){
+            	sheet.setColumnWidth(colNum, (columnWidth-2) * 256);
+            }else{
+            	sheet.setColumnWidth(colNum, (columnWidth+4) * 256);
+            }
+        }
+		
+		
+		//Download
 		if(wb != null){
 			
 			// 设置response参数，可以打开下载页面

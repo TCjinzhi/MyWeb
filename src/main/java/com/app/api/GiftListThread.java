@@ -116,8 +116,8 @@ public class GiftListThread implements Runnable {
 		        String string = EntityUtils.toString(response.getEntity());
 //		        JSONObject obj = JSONObject.fromObject(string);
 		        APIResponse apiResponse = JSON.parseObject(string,APIResponse.class);
-		        System.out.println("apiResponse:"+apiResponse.getData().size());
-		        System.out.println(JSON.toJSONString(apiResponse, true));
+//		        System.out.println("apiResponse:"+apiResponse.getData().size());
+//		        System.out.println(JSON.toJSONString(apiResponse, true));
 //		        System.out.println(obj.get("data").toString());
 		        return apiResponse;
 		        

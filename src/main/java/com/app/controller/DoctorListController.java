@@ -17,6 +17,8 @@ import org.apache.poi.hssf.usermodel.HSSFWorkbook;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
+
+import com.app.commonTool.ExportExcel;
 import com.app.commonTool.PageInfo;
 import com.app.commonTool.PaginationContext;
 import com.app.pojo.Doctor;
@@ -162,10 +164,32 @@ public class DoctorListController {
         	os.close();
         	wb.close();
 		} catch (Exception e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 		
+	}
+	
+	@RequestMapping("exportByUtil")
+	public void exportByUtil(HttpServletResponse response, Model model){
+		List<Doctor> doctors = new ArrayList<>();
+		doctors = doctorService.getDoctorList(null);
+		String filename = "DoctorList";
+		String[] titles = new String[]{"序号","姓名","手机","医院"};
+		List<Object[]> contentList = new ArrayList<>();
+		Object[] objs = null;
+		for(Doctor doctor : doctors){
+			objs = new Object[titles.length];
+			objs[0] = doctor.getId();
+			objs[1] = doctor.getName();
+			objs[2] = doctor.getMobile();
+			objs[3] = doctor.getHospital();
+			
+			contentList.add(objs);
+		}
+		
+		String result = ExportExcel.exportExcel(filename, titles, contentList, response);
+		
+		System.out.println("导出结果："+result);
 	}
 	
 }

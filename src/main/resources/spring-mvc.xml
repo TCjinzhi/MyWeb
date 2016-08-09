@@ -115,8 +115,8 @@
     <!-- 另一种触发器是CornTrigger -->
      <bean id="cornTrigger" class="org.springframework.scheduling.quartz.CronTriggerFactoryBean">
        <property name="jobDetail" ref="jobDetail"/>
-       <!-- 每个10秒触发 -->
-       <property name="cronExpression" value="0/10 * * * * ?"/>
+       <!-- 秒 分 时 日 月 星期 年份 -->
+       <property name="cronExpression" value="0 0 8 * * ?"/>
     </bean> 
     
     <!-- 定义核心调度器 -->

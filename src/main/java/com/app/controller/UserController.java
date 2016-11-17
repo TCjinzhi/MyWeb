@@ -75,23 +75,34 @@ public class UserController {
     }
     
     
+//    @RequestMapping("/register")
+//    public String register(HttpServletRequest request,Model model){
+//    	User user = new User();
+//    	String password = request.getParameter("password");
+//    	password = StrUtil.getEncryptStr(password);
+//    	user.setUserName(request.getParameter("userName"));
+//    	user.setPassword(password);
+//    	user.setAge(Integer.parseInt(request.getParameter("age")));
+//    	user.setAddress(request.getParameter("address"));
+//    	if(this.userService.insert(user) == 0){
+//    		request.setAttribute("message", "注册失败");
+//    		return "register";
+//    	}
+//    	return "login";
+//    }
+    
     @RequestMapping("/register")
-    public String register(HttpServletRequest request,Model model){
-    	User user = new User();
-    	String password = request.getParameter("password");
-    	password = StrUtil.getEncryptStr(password);
-    	user.setUserName(request.getParameter("userName"));
-    	user.setPassword(password);
-    	user.setAge(Integer.parseInt(request.getParameter("age")));
-    	user.setAddress(request.getParameter("address"));
+    public String register(User user,Model model){
+    	//密码加密
+    	user.setPassword(StrUtil.getEncryptStr(user.getPassword()));
     	if(this.userService.insert(user) == 0){
-    		request.setAttribute("message", "注册失败");
+    		model.addAttribute("message", "注册失败");
     		return "register";
     	}
     	return "login";
     }
     
-    @RequestMapping("/checkUsername")
+    @RequestMapping(value="/checkUsername")
     @ResponseBody
     public CheckUsername checkUsername(@RequestBody User user) {
     	CheckUsername cuser = new CheckUsername();

@@ -3277,3 +3277,12 @@ Caused by: java.lang.IllegalArgumentException: Cannot load an ApplicationContext
 [INFO] [2016-08-04 13:53:32][com.alibaba.druid.pool.DruidDataSource]{dataSource-1} inited
 [INFO] [2016-08-04 13:53:33][org.springframework.context.support.GenericApplicationContext]Closing org.springframework.context.support.GenericApplicationContext@887af79: startup date [Thu Aug 04 13:53:32 CST 2016]; root of context hierarchy
 [INFO] [2016-08-04 13:53:33][com.alibaba.druid.pool.DruidDataSource]{dataSource-1} closed
+[INFO] [2016-10-20 16:57:44][org.springframework.beans.factory.xml.XmlBeanDefinitionReader]Loading XML bean definitions from class path resource [spring-mybatis.xml]
+[INFO] [2016-10-20 16:57:44][org.springframework.context.support.GenericApplicationContext]Refreshing org.springframework.context.support.GenericApplicationContext@887af79: startup date [Thu Oct 20 16:57:44 CST 2016]; root of context hierarchy
+[INFO] [2016-10-20 16:57:44][org.springframework.beans.factory.config.PropertyPlaceholderConfigurer]Loading properties file from class path resource [jdbc.properties]
+[INFO] [2016-10-20 16:57:44][org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor]JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+[ERROR] [2016-10-20 16:57:45][com.alibaba.druid.pool.DruidAbstractDataSource]maxIdle is deprecated
+[INFO] [2016-10-20 16:57:45][com.alibaba.druid.pool.DruidDataSource]{dataSource-1} inited
+[INFO] [2016-10-20 16:57:46][com.test.TestMyBatis]{"address":"湖北","age":16,"id":8,"password":"ef72b761d8771c7fdce1aa808943e856","userName":"shama"}
+[INFO] [2016-10-20 16:57:46][org.springframework.context.support.GenericApplicationContext]Closing org.springframework.context.support.GenericApplicationContext@887af79: startup date [Thu Oct 20 16:57:44 CST 2016]; root of context hierarchy
+[INFO] [2016-10-20 16:57:46][com.alibaba.druid.pool.DruidDataSource]{dataSource-1} closed

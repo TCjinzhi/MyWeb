@@ -3,12 +3,15 @@ package com.app.controller;
 import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.validation.Valid;
 
 import org.apache.log4j.Logger;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.validation.Errors;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import com.alibaba.fastjson.JSON;
@@ -42,7 +45,7 @@ public class UserController {
         return "showUser";
     }
     
-    @RequestMapping("/login")
+    @RequestMapping(value="/login",method=RequestMethod.POST)
     public String login(HttpServletRequest request,HttpServletResponse response,Model model){
     	String username;
     	String password;
@@ -91,15 +94,24 @@ public class UserController {
 //    	return "login";
 //    }
     
-    @RequestMapping("/register")
-    public String register(User user,Model model){
+    @RequestMapping(value="/register",method=RequestMethod.GET)
+    public String register(Model model){
+		return "register";
+    }
+    
+    @RequestMapping(value="/register",method=RequestMethod.POST)
+    public String registerSubmit(@Valid User user,Errors errors,Model model){
+    	if (errors.hasErrors()) {
+    		model.addAttribute("message", "表单信息有误");
+    		return "register";
+		}
     	//密码加密
     	user.setPassword(StrUtil.getEncryptStr(user.getPassword()));
     	if(this.userService.insert(user) == 0){
     		model.addAttribute("message", "注册失败");
     		return "register";
     	}
-    	return "login";
+    	return "redirect:/user/login";
     }
     
     @RequestMapping(value="/checkUsername")

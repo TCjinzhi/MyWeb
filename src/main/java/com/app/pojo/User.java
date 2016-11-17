@@ -2,6 +2,8 @@ package com.app.pojo;
 
 import java.io.Serializable;
 
+import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Size;
 import javax.xml.bind.annotation.XmlRootElement;
 
 @XmlRootElement(name="User")
@@ -12,8 +14,11 @@ public class User implements Serializable {
 	
     private Integer id;
 
+    @NotNull
     private String userName;
     
+    @NotNull
+    @Size(min=6,max=16)
     private String password;
     
     private Integer age;

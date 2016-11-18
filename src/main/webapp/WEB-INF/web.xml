@@ -105,7 +105,13 @@
 	<servlet-mapping>
 		<servlet-name>DruidStatView</servlet-name>
 		<url-pattern>/druid/*</url-pattern>
-	</servlet-mapping>
+	</servlet-mapping>	
+	<!-- spring web security -->
+<!-- 	<filter> -->
+<!-- 		<filter-name>springSecurityFilterChain</filter-name> -->
+<!-- 		<filter-class>org.springframework.web.filter.DelegatingFilterProxy</filter-class> -->
+<!-- 	</filter> -->
+	
 	<!-- 程序Session配置 -->
 	<session-config>
 		<!-- Session过期时间(单位：分) -->

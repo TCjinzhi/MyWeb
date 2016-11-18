@@ -40,7 +40,7 @@
      )
   </insert>
   <insert id="insertSelective" parameterType="com.app.pojo.User" >
-    insert into muser
+    insert  ignore into muser
     <trim prefix="(" suffix=")" suffixOverrides="," >
       <if test="userName != null" >
         name,

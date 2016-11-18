@@ -13,7 +13,7 @@
 <div id="content" class="cf">
 	<div id="duobei_wrap">
 		<div class="logo_wrap cf">
-			<a href="${pageContext.request.contextPath}/jsp/login.jsp" id="logo"></a>
+			<a href="${pageContext.request.contextPath}/user/index" id="logo"></a>
 			<div id="title"><i>信</i><i>息</i><i>系</i><i>统</i></div>
 		</div>
 		<div class="reason">
@@ -36,7 +36,7 @@
 			<span>4</span>
 		</div>
 		<div class="btn">
-			<a href="${pageContext.request.contextPath}/jsp/login.jsp" class="button button-rounded">返回登录</a>
+			<a href="${pageContext.request.contextPath}/user/index" class="button button-rounded">返回登录</a>
 			<a href="#" class="button button-rounded cancle">返回上页</a>
 		</div>   
 	</div>

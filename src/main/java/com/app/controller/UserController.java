@@ -7,6 +7,7 @@ import javax.validation.Valid;
 
 import org.apache.log4j.Logger;
 import org.springframework.stereotype.Controller;
+import org.springframework.transaction.annotation.Transactional;
 import org.springframework.ui.Model;
 import org.springframework.validation.Errors;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -105,6 +106,12 @@ public class UserController {
     		model.addAttribute("message", "表单信息有误");
     		return "register";
 		}
+    	User checkUser = this.userService.checkUsername(user.getUserName());
+    	if(checkUser != null){
+    		model.addAttribute("message", "用户已存在");
+    		return "register";
+    	}
+    	
     	//密码加密
     	user.setPassword(StrUtil.getEncryptStr(user.getPassword()));
     	if(this.userService.insert(user) == 0){

@@ -49,7 +49,7 @@
 						<div class="controls">
 							<label class="checkbox"><input type="checkbox" /> 记住我</label>
 							<button type="submit" class="btn">登陆</button>
-							<br /> <br /> <a href="../jsp/register.jsp">立即注册</a>
+							<br /> <br />  <a href="../user/register">立即注册</a>
 						</div>
 					</div>
 				</form>

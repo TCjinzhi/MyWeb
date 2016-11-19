@@ -1,5 +1,6 @@
 package com.test;
 
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Iterator;
 import java.util.List;
@@ -7,11 +8,18 @@ import java.util.Map;
 
 import org.junit.Before;
 import org.junit.Test;
+import org.junit.runner.RunWith;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.redis.core.RedisTemplate;
+import org.springframework.test.context.ContextConfiguration;
+import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
 import com.app.commonTool.RedisUtil;
 
 import redis.clients.jedis.Jedis;
 
+@RunWith(SpringJUnit4ClassRunner.class)
+@ContextConfiguration(locations = { "classpath:redis-context.xml" })
 public class TestRedis {
     private Jedis jedis; 
     
@@ -136,4 +144,18 @@ public class TestRedis {
         RedisUtil.getJedis().set("newname", "中文测试");
         System.out.println(RedisUtil.getJedis().get("newname"));
     }
+    
+    
+    @Autowired
+    private RedisTemplate<String, List<String>> redisTemplate;
+    
+    @Test
+    public void testRedisTemplate() {
+    	List<String> listValue = new ArrayList<String>();
+	    listValue.add("001");
+	    listValue.add("002");
+	    redisTemplate.opsForValue().set("list", listValue);
+	    System.out.println(redisTemplate.opsForValue().get("list"));
+	}
+    
 }

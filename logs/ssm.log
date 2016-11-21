@@ -3621,3 +3621,11 @@ Caused by: java.lang.NoSuchMethodError: org.springframework.core.serializer.supp
 [INFO] [2016-11-19 09:54:59][org.springframework.context.support.PropertySourcesPlaceholderConfigurer]Loading properties file from class path resource [redis.properties]
 [INFO] [2016-11-19 09:54:59][org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor]JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
 [INFO] [2016-11-19 09:54:59][org.springframework.context.support.GenericApplicationContext]Closing org.springframework.context.support.GenericApplicationContext@9660f4e: startup date [Sat Nov 19 09:54:59 CST 2016]; root of context hierarchy
+[INFO] [2016-11-21 10:10:02][org.springframework.context.support.ClassPathXmlApplicationContext]Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@5594a1b5: startup date [Mon Nov 21 10:10:02 CST 2016]; root of context hierarchy
+[INFO] [2016-11-21 10:10:02][org.springframework.beans.factory.xml.XmlBeanDefinitionReader]Loading XML bean definitions from class path resource [redis-context.xml]
+[INFO] [2016-11-21 10:10:02][org.springframework.context.support.PropertySourcesPlaceholderConfigurer]Loading properties file from class path resource [redis.properties]
+[INFO] [2016-11-21 10:10:02][org.springframework.context.support.ClassPathXmlApplicationContext]Closing org.springframework.context.support.ClassPathXmlApplicationContext@5594a1b5: startup date [Mon Nov 21 10:10:02 CST 2016]; root of context hierarchy
+[INFO] [2016-11-21 10:25:30][org.springframework.context.support.ClassPathXmlApplicationContext]Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@5594a1b5: startup date [Mon Nov 21 10:25:30 CST 2016]; root of context hierarchy
+[INFO] [2016-11-21 10:25:31][org.springframework.beans.factory.xml.XmlBeanDefinitionReader]Loading XML bean definitions from class path resource [redis-context.xml]
+[INFO] [2016-11-21 10:25:31][org.springframework.beans.factory.config.PropertyPlaceholderConfigurer]Loading properties file from class path resource [redis.properties]
+[INFO] [2016-11-21 10:25:31][org.springframework.context.support.ClassPathXmlApplicationContext]Closing org.springframework.context.support.ClassPathXmlApplicationContext@5594a1b5: startup date [Mon Nov 21 10:25:30 CST 2016]; root of context hierarchy
